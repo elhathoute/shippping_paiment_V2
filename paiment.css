@@ -1,0 +1,73 @@
+
+
+._paymentMethodName_6fzfd_6{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+._paymentLineContainer_6fzfd_58 {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 100%;
+}
+
+.input-group img {
+    position: absolute;
+    left: 92%;
+    top: 50%;
+    width: 7%;
+}
+@media screen  and (min-width:990px) and (max-width:1200px) {
+    body{
+        background-color: red;
+    }
+    .input-group img {
+        position: absolute;
+        left: 92%;
+        top: 40%;
+        width: 7%;
+    }
+    
+}
+
+@media screen  and (min-width:1200px)  {
+    body{
+        background-color: rgb(0, 255, 4);
+    }
+    .input-group img {
+        position: absolute;
+        left: 95%;
+        top: 48%;
+        width: 4%;
+    }
+    
+}
+
+._paymentMethodName_6fzfd_6 {
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 0%;
+    align-items: center;
+    justify-content: space-between;
+}
+._paymentMethodName_6fzfd_6 span {
+    font-size: .9375rem;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    line-height: 36px;
+}
+._paymentMethodCreditImgList_6fzfd_155 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+._paymentMethodName_6fzfd_6 img {
+    height: 1.5rem;
+    margin-top: .3125rem;
+    margin-right: .3125rem;
+    margin-bottom: .3125rem;
+    display: inline-flex;
+}

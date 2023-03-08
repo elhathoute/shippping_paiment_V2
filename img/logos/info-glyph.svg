@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Glyph / Info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tools-&gt;-Find-a-rate-DESKTOP-Copy-7" transform="translate(-400.000000, -1363.000000)">
+            <g id="2-Combination-/-Notification-/-1-Desktop-Tablet-/-Info" transform="translate(376.000000, 1340.000000)">
+                <g id="Group">
+                    <g id="Icons-/-Glyph-/-Info" transform="translate(24.000000, 23.000000)">
+                        <path d="M23.5,12 C23.5,18.351 18.351,23.5 12,23.5 C5.649,23.5 0.5,18.351 0.5,12 C0.5,5.649 5.649,0.5 12,0.5 C18.351,0.5 23.5,5.649 23.5,12 Z" id="Stroke-1" stroke="#0467C6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12,10.5332 L12,16.5332" id="Stroke-3" stroke="#0467C6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M11.3,7.6668 C11.3,7.2798 11.613,6.9668 12,6.9668 C12.387,6.9668 12.7,7.2798 12.7,7.6668 C12.7,8.0538 12.387,8.3668 12,8.3668 C11.613,8.3668 11.3,8.0538 11.3,7.6668" id="Fill-5" fill="#0467C6" fill-rule="evenodd"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

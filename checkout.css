@@ -292,9 +292,6 @@ legal,legend,caption {
     display: none
 }
 
-@charset "UTF-8"; .slick-loading .slick-list {
-    background: #fff url('../resources/images/ajax-loader.gif') center center no-repeat
-}
 
 .slick-prev,.slick-next {
     position: absolute;
@@ -10039,12 +10036,14 @@ pre code {
     margin-left: auto;
     padding-left: 16px;
     padding-right: 16px;
-    *zoom:1}
+    zoom:1 !important;
+}
 
 .container:before,.container:after {
     content: " ";
     display: table
 }
+
 
 .container:after {
     clear: both
@@ -12216,7 +12215,8 @@ tbody.collapse.in {
 
 .input-group {
     position: relative;
-    display: table;
+    margin:5px 10px;
+    /* display: table; */
     border-collapse: separate
 }
 
@@ -12763,6 +12763,7 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
         border-radius:0
     }
 }
+
 
 .navbar-fixed-top {
     top: 0;
@@ -14454,7 +14455,11 @@ button.close {
     border-top-width: 0;
     border-bottom-color: #fff
 }
+/* paiment */
 
+
+
+/* paiment fin */
 .popover.left>.arrow {
     top: 50%;
     right: -11px;
@@ -14875,9 +14880,20 @@ body {
     color: #fff;
     text-shadow: none
 }
+.information-header{
+    margin-top: 50px;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    letter-spacing: 0.2px;
+    font-family: cursive;
+}
 
 a {
-    color: #00e
+    color: #00e;
+ 
+    
 }
 
 a:visited {
@@ -17146,7 +17162,7 @@ button:focus {
 }
 
 .mz-pagetitle {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     clear: both
 }
 
@@ -31079,6 +31095,8 @@ body {
 }
 *{
     box-sizing: border-box;
+    margin:0;
+    padding: 0;
 }
 @media (max-width: 1000px) {
     .delivery-svg-h1{
@@ -31088,7 +31106,8 @@ body {
     
     }
     .delivery-svg-h1 p{
-        font-size: 16px !important;
+        font-size: 1.8rem !important;
+        margin-right: 2.8rem !important;
     }
    
 }
@@ -31109,10 +31128,13 @@ body {
     ,url(./img/logos/white.svg) no-repeat 100% 100%;
 }
 .delivery-svg-h1 p{
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 2.25rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.3px;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    letter-spacing: 0.2px;
+    font-family: cursive;
+
 }
 .my-4{
     margin-top: 60px !important;
@@ -31124,9 +31146,10 @@ body {
     flex-direction: column;
 }
 .alert-primary{
-    background-color:#bae8e8;
+    background-color: #e5eff9;
     border-radius: 5px;
-    box-shadow:1px 1px 2px 1px #a786df;
+    color: black;
+   
 }
 .delivery-icon-paragraph p{
     text-align: center;
