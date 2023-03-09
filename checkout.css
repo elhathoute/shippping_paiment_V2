@@ -11451,8 +11451,10 @@ textarea.form-horizontal .form-group-sm .form-control,select[multiple].form-hori
 
 .btn.primary-button:disabled {
     color: #666;
-    background-color: #f0f0f0;
-    border: solid 1px #f0f0f0
+    background-color:white;
+    color:#000000;
+    border: solid 1px blue;
+    cursor: not-allowed;
 }
 
 .btn.primary-button:focus {
@@ -32158,7 +32160,9 @@ body {
 }
 
 .mz-checkout .mz-l-pagewrapper {
-    position: relative
+    position: relative;
+    min-height: 100vh !important;
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -32434,7 +32438,8 @@ body {
 
 .mz-pagefooter {
     position: relative;
-    width: 100%
+    width: 100%;
+    /* bottom: 0px; */
 }
 
 .individual-address-container {
