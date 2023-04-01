@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <head>
     <title>Shipping information</title>
-    <!-- js bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="paiment.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 </head>
 
 <body class="mz-checkout checkout-page desktop-screen www">
@@ -95,32 +94,14 @@
         
     </nav>
     
-    <div class="mega-nav-overlay"></div><script type="text/template" class="cpc-modal__template noindex" id="sign-in-modal" data-cpc-modal-options="{&quot;preserveOnClose&quot;: &quot;true&quot;, &quot;id&quot;: &quot;signinFormDesktop&quot;, &quot;title&quot;:&quot; &quot;,&quot;autoOpen&quot;:false,&quot;closeLabel&quot;:&quot;Close&quot;,&quot;closeMethods&quot;:[&quot;overlay&quot;,&quot;escape&quot;],&quot;cssClass&quot;:[&quot;sign-in-modal&quot;]}">
+    <div class="mega-nav-overlay"></div>
+    <script type="text/template" class="cpc-modal__template noindex" id="sign-in-modal" data-cpc-modal-options="{&quot;preserveOnClose&quot;: &quot;true&quot;, &quot;id&quot;: &quot;signinFormDesktop&quot;, &quot;title&quot;:&quot; &quot;,&quot;autoOpen&quot;:false,&quot;closeLabel&quot;:&quot;Close&quot;,&quot;closeMethods&quot;:[&quot;overlay&quot;,&quot;escape&quot;],&quot;cssClass&quot;:[&quot;sign-in-modal&quot;]}">
     
     <div class="cpc-modal-template-modal-body">
       <div class="row sign-in-modal-content flex-row">
         <div class="large-6 cpc-modal__fluid-gutter-m columns left-area">
           
-      <form method="post" action="https://sso-osu.canadapost-postescanada.ca/lfe-cap/en/login?stepupId=smb_mode1,consumer,commercial_link,smb_link&sourceUrl=https%3A%2F%2Fstore.canadapost-postescanada.ca%2Fcheckout%2F1507775c565ea400015ec1580000725a&targetUrl=https%3A%2F%2Fstore.canadapost-postescanada.ca%2Fcheckout%2F1507775c565ea400015ec1580000725a&businessUrl=https%3A%2F%2Fwww.canadapost-postescanada.ca%2Fdash-tableau%2Fen%2F" name="headerSISU" class="cpidSignIn sso_form">
-        <h3 id="cpc-dialog-header-id">Access your account</h3>
-        <label for="usernameLarge" class="sign-in-input-label">Username</label>
-        <input id="usernameLarge" class="sign-in-modal-input" name="username" type="text">
-        <div class="remember-me-container cpc-control-group">
-          <div class="cpc-control-option">
-            <input value="1" id="remembermeLarge" class="sign-in-modal-input" name="rememberme" type="checkbox">
-            <label for="remembermeLarge">Remember my username on this device</label>
-          </div>  
-        </div>
-        <label for="passwordLarge" class="sign-in-input-label">Password</label>
-        <input id="passwordLarge" class="sign-in-modal-input" name="password" type="password" autocomplete="nope">
-        <input value="Sign in" class="button sign-in-up-buttons" type="submit" role="button">
-        <p class="forgot-username-password">Forgot
-          <a tabindex="0" href="https://sso-osu.canadapost-postescanada.ca/lfe-cap/en/forgot-username?&sourceUrl=https%3A%2F%2Fstore.canadapost-postescanada.ca%2Fcheckout%2F1507775c565ea400015ec1580000725a&targetUrl=https%3A%2F%2Fstore.canadapost-postescanada.ca%2Fcheckout%2F1507775c565ea400015ec1580000725a&businessUrl=https%3A%2F%2Fwww.canadapost-postescanada.ca%2Fdash-tableau%2Fen%2F" class="sso_link" businessurl="https://www.canadapost-postescanada.ca/dash-tableau/en/" tabindex="-1">Username?</a> or <a tabindex="0" href="https://sso-osu.canadapost-postescanada.ca/lfe-cap/en/forgot-password?&sourceUrl=https%3A%2F%2Fstore.canadapost-postescanada.ca%2Fcheckout%2F1507775c565ea400015ec1580000725a&targetUrl=https%3A%2F%2Fstore.canadapost-postescanada.ca%2Fcheckout%2F1507775c565ea400015ec1580000725a&businessUrl=https%3A%2F%2Fwww.canadapost-postescanada.ca%2Fdash-tableau%2Fen%2F" class="sso_link" businessurl="https://www.canadapost-postescanada.ca/dash-tableau/en/" tabindex="-1">Password?</a>
-        </p>
-        <input name="cpidSignIn_SUBMIT" value="1" type="hidden">
-        <input name="cpidSignIn_widgetSignIn" value="1" type="hidden">
-        
-      </form>
+     
     
         </div>
       
@@ -130,12 +111,7 @@
       Create an online account to save tracked items, unlock valuable discounts for your business, and more.
     </p>
     
-    <!--Leaving list items for possible future implementation-->
-    <!--<ul class="visible-for-large-up">-->
-      <!--<li>Access your personalized dashboard in a few easy steps! </li>-->
-      <!--<li>undefined</li>-->
-      <!--<li>undefined</li>-->
-    <!--</ul>-->
+    
     <p class="signup-text visible-for-large-up">
       Access your personalized dashboard in a few easy steps! 
     </p>
@@ -4542,87 +4518,250 @@
         
         </div>
         <div class="mobile-active-menu-background"></div></div>
-      </cpc-header><span id="main-content"></span></header><div class="search-modal-container"><div class="modal fade search-modal right" data-backdrop="static" data-keyboard="false" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"><div class="search-box-container"><form id="globalSearchBox" class="mz-global-searchbox mz-searchbox-expands" action="/search"><span class="mz-searchbox-field"><label for="globalSearchInput" class="visuallyhidden">search product</label><span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;"><input id="globalSearchInput" placeholder="Search our website" type="search" aria-describedby="initInstr" aria-label="Search" class="mz-searchbox-input tt-input" autocomplete="off" name="query" data-mz-role="globalSearchQuery" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 300; word-spacing: 0px; letter-spacing: 0.5px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div class="tt-dataset-pages"></div><div class="tt-dataset-terms"></div></span></span><button id="globalSearchButton" class="mz-searchbox-button" type="submit">Search</button><span id="initInstr" class="visuallyhidden">Use a minimum of three keys for search, When autocomplete results are available use up and down arrows to review and enter to select. Touch device users, explore by touch, or with swipe gestures.</span><span aria-live="polite" class="visuallyhidden search-reader-text"></span></span><input type="hidden" name="csrf_token" value="27124086accf4f8ebf5d27d165515896"></form><div id="globalSearchError" class="alert-danger hidden"> Please enter an item. Examples:  stamps, shipping products</div></div><button type="button" class="close-btn" data-dismiss="modal" aria-label="Close"><img src="https://store.canadapost-postescanada.ca/resources/images/icons/close.svg" alt="Close"></button><div class="popular-product-categories"><div id="mz-drop-zone-popular-product-categories" class="mz-drop-zone"><div class="mz-cms-row" data-widget="{&quot;title&quot;:&quot;Dropzone&quot;}"><div class="mz-cms-col-12-12" style="width:"><div class="mz-cms-block"><div class="mz-cms-content"><div class="popular-category-container"><h1 class="category-block-title">Popular product categories</h1><div class="popular-category-details"><div class="category-details"><a href="/c/5" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/c34a3627-ffda-4168-bc64-4065fffb4bd4?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Postage stamps</span></div></a></div><div class="category-details"><a href="/c/2" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/ac000f7b-616c-4775-882d-ce67bfdbcff7?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Stamp collecting</span></div></a></div><div class="category-details"><a href="/c/13" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/c15e24ab-9f59-4e83-81ac-c530bee2ba0c?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Stamp collecting accessories</span></div></a></div><div class="category-details"><a href="/c/3" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/18ab0ac6-e2f7-4473-919f-21c52d496788?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Coin collecting</span></div></a></div><div class="category-details"><a href="/c/8" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/5a75c5b5-ebd4-4bc6-b434-94e88025ee27?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Flat rate (prepaid) products</span></div></a></div><div class="category-details"><a href="/c/7" class="category-link  last "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/8d6dd691-c76f-40a2-8153-b041f0edadb5?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Shipping supplies</span></div></a></div></div></div></div></div></div></div></div></div></div></div></div></div></div><!-- Quick view Modal--><div id="quickViewModal" aria-hidden="true" class="modal fade quick-view-modal" tabindex="-1" style="display: none;" role="dialog" aria-label="quick View modal"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"></div></div></div></div><!-- Added To Cart Confirmation Modal --><div id="cartConfirmationModal"></div><!-- Added To Cart Favourites Modal --><div id="addedToFavContainer"></div><!-- Sign In To Continue Modal --><div id="signInConfirmationModalContainer"></div><!-- Profile Switching Modal --><div class="modal fade change-profile-modal" id="changeProfileModal" aria-hidden="true" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content" id="changeProfileModalContainer"></div></div></div><!-- Profile Switching Banner --><div id="profileSwitchingBannerContainer"></div><!-- Loading Modal --><div class="modal fade loading-modal" id="loadingModal" aria-hidden="true" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"><img alt="Loader" class="loading-image" src="https://store.canadapost-postescanada.ca/resources/images/loader_Colour.gif"><h3 class="loading-text">Updating</h3></div></div></div></div><div id="mz-drop-zone-adobe-analytics" class="mz-drop-zone hidden"><div class="mz-cms-row" data-widget="{&quot;title&quot;:&quot;Dropzone&quot;}"><div class="mz-cms-col-12-12"><div class="mz-cms-block"><div class="mz-cms-content"><div class="mz-content-widget-wrap"><div class="mz-content-widget-inner-wrap"><script type="text/javascript">
-        //<![CDATA[
-        <!--DTM Data Layer BEGIN-->
-        var pageType = $('meta[name=pageType]').attr('content');
-        var language =  $('html').attr('lang');
-        var on_a_tool = pageType == 'product' ? 'detail page' : pageType == 'category' ? 'landing page' : "";
-        var title = pageType == 'product' ? "p-" + $('meta[name=productCode]').attr('content') : pageType == 'category' ? $('meta[name=categoryName]').attr('content') : pageType == 'cart' ? 'basket > basket page' : pageType == 'checkout' ? 'checkout - address' : pageType == 'confirmation' ? 'checkout - confirmation' : document.title.split('-')[0].trim() === 'Home' ? 'landing page' : document.title.split('-')[0].trim() +
-            ' page';
-        var digitalData = {};
-        digitalData.page = {};
-        digitalData.product = [];
-        digitalData.transaction = {};
-        digitalData.transaction.item = [];
-        digitalData.transaction.attributes = {};
-        digitalData.page = {
-            pageInfo: {
-                pageName: ("".length > 0 ? "" : "cpc.ca: > " + language + " > " + ("personal" == 'business' ? "business" : "common") + " > " + "shop" + " > " + ("shop" == 'miniform' || "shop" == 'shop' ? (document.title.split('-')[0].trim() == 'Home' || pageType == 'cart' || document.title.split('-')[0].trim() == 'Favourites') ? title : title + " > " : '') + "" + ("".length > 0 ? " > " : '') + "" + (on_a_tool.length > 0 ? on_a_tool : (document.title.split('-')[0].trim() == 'Home' || document.title.split('-')[0].trim() == 'Favourites' || pageType == 'cart') ? "" : ($("form").length > 0 ? 'form' : 'thank you')))
-            },
-            category: {
-                primaryCategory: "shop",
-                pageType: (on_a_tool.length > 0 ? on_a_tool : "page")
-            }
-        };
-        
-        var productCode = $('meta[name=productCode]').attr('content');
-        productCode ? digitalData.product.push({ "productInfo": { "sku" : productCode }}) : '';
-        window.digitalData = digitalData;
-        _satellite.track('Data Layer Ready');
-        //]]></script></div></div></div></div></div></div></div><div role="main" id="page-content"><script type="text/json" id="data-mz-preload-checkout">{"orderNumber":252255,"version":"1","isPartialOrder":false,"originalCartId":"15077747565ea400015ec1570000725a","priceListCode":"default","availableActions":["SetOrderAsErrored","AbandonOrder"],"shopperNotes":{},"isTaxExempt":false,"ipAddress":"197.230.213.189","status":"Pending","type":"Online","paymentStatus":"Unpaid","returnStatus":"None","isEligibleForReturns":false,"totalCollected":0.0,"attributes":[{"auditInfo":{"updateDate":"2023-03-07T11:04:15.264Z","createDate":"2023-03-07T11:04:15.264Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"fullyQualifiedName":"tenant~po_number","attributeDefinitionId":10,"values":["Online Store"]},{"auditInfo":{"updateDate":"2023-03-07T11:04:15.265Z","createDate":"2023-03-07T11:04:15.265Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"fullyQualifiedName":"tenant~newMOQch","attributeDefinitionId":36,"values":[10]}],"shippingDiscounts":[],"handlingDiscounts":[],"handlingTotal":0.0,"fulfillmentStatus":"NotFulfilled","isFulfillable":false,"notes":[],"items":[{"id":"8dd0c7174bae4a5a8e64afbe00c99448","originalCartItemId":"473fab0c648446ce8b17afbe00b561a9","fulfillmentLocationCode":"CPWarehouse","fulfillmentMethod":"Ship","isReservationEnabled":false,"lineId":1,"product":{"fulfillmentTypesSupported":["DirectShip"],"imageAlternateText":"A strip of 10 stamps from the Ranunculus stamp issue.","imageUrl":"//cdn-tp3.mozu.com/29274-48103/cms/48103/files/75b862da-a17a-4b49-a37f-e5a3385d1da7","options":[],"properties":[{"attributeFQN":"tenant~is-commercial","name":"Is Commercial","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~overmax-allowed","name":"Overmax Allowed","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~special-customer-item","name":"Special Customer Product","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~preorder-flag","name":"Preorder Flag","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~promotional-ribbon","name":"Promotional Ribbon","dataType":"String","isMultiValue":false,"values":[{"stringValue":"New","value":"new"}]},{"attributeFQN":"tenant~denomination","name":"Denomination","dataType":"String","isMultiValue":false,"values":[{"stringValue":"92¢ - $3","value":"-1"}]},{"attributeFQN":"tenant~tax-class","name":"tax class","dataType":"String","isMultiValue":false,"values":[{"stringValue":"8","value":"8"}]},{"attributeFQN":"tenant~moqch10","name":"MOQCh10","dataType":"Number","isMultiValue":false,"values":[{"value":1}]},{"attributeFQN":"tenant~format","name":"Format","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Strip","value":"strip"}]},{"attributeFQN":"tenant~stamp-collection","name":"Stamp collection","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Ranunculus","value":"Ranunculus"}]},{"attributeFQN":"tenant~stamp-designer","name":"Stamp Designer","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Stéphane Huot","value":"Stéphane Huot"}]},{"attributeFQN":"tenant~issue-date","name":"Issue Date","dataType":"String","isMultiValue":false,"values":[{"stringValue":"March 1, 2023","value":"March 1, 2023"}]},{"attributeFQN":"tenant~stamp-value","name":"Stamp Value","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Permanent™ domestic rate","value":"Permanent™ domestic rate"}]},{"attributeFQN":"tenant~issue-year","name":"Year","dataType":"Number","isMultiValue":false,"values":[{"value":2023}]},{"attributeFQN":"tenant~theme","name":"Theme","dataType":"String","isMultiValue":true,"values":[{"stringValue":"Animals and Nature","value":"animals-and-nature"}]},{"attributeFQN":"tenant~moqch40","name":"MOQCh40","dataType":"Number","isMultiValue":false,"values":[{"value":1}]}],"categories":[{"id":10,"parent":{"id":2}},{"id":5,"parent":{"id":1}}],"price":{"price":9.2,"priceListCode":"default","priceListEntryMode":"Simple"},"discountsRestricted":false,"isTaxable":true,"productType":"Stamp Collecting","productUsage":"Standard","bundledProducts":[],"productCode":"404217119","name":"Ranunculus: Permanent\u003csup\u003eTM\u003c/sup\u003e domestic rate stamps – strip of 10","goodsType":"Physical","isPackagedStandAlone":false,"stock":{"manageStock":false,"isOnBackOrder":false,"isSubstitutable":false},"measurements":{"height":{"unit":"in","value":1.000},"width":{"unit":"in","value":1.000},"length":{"unit":"in","value":1.000},"weight":{"unit":"lbs","value":1.000}},"fulfillmentStatus":"Pending"},"quantity":1,"subtotal":9.2,"extendedTotal":9.2,"taxableTotal":9.2,"discountTotal":0.0,"discountedTotal":9.2,"itemTaxTotal":1.38,"shippingTaxTotal":0.0,"shippingTotal":0.0,"feeTotal":0.0,"total":10.58,"unitPrice":{"extendedAmount":9.2,"listAmount":9.2},"productDiscounts":[],"shippingDiscounts":[],"auditInfo":{},"shippingAmountBeforeDiscountsAndAdjustments":0.0,"weightedOrderAdjustment":0.0,"weightedOrderDiscount":0.00,"adjustedLineItemSubtotal":9.2000,"totalWithoutWeightedShippingAndHandling":10.5800,"weightedOrderTax":0.00,"weightedOrderShipping":1.66,"weightedOrderShippingDiscount":0.0,"weightedOrderShippingManualAdjustment":0.0,"weightedOrderShippingTax":0.25,"weightedOrderHandlingFee":0.0,"weightedOrderHandlingFeeTax":0.00,"weightedOrderHandlingFeeDiscount":0.0,"weightedOrderDuty":0.0,"totalWithWeightedShippingAndHandling":12.4900,"weightedOrderHandlingAdjustment":0.0,"isAssemblyRequired":false},{"id":"5c93080f33564e069385afbe00c99448","originalCartItemId":"758eff24933c43a583ceafbe00c981fb","fulfillmentLocationCode":"CPWarehouse","fulfillmentMethod":"Ship","isReservationEnabled":false,"lineId":2,"product":{"fulfillmentTypesSupported":["DirectShip"],"imageAlternateText":"","imageUrl":"//cdn-tp3.mozu.com/29274-48103/cms/48103/files/439a66a5-6bf5-4309-981a-4621c6f09d59","options":[],"properties":[{"attributeFQN":"tenant~preorder-flag","name":"Preorder Flag","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~packaging-type","name":"Packaging type","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Mailers and envelopes","value":"mailers-and-envelopes"}]},{"attributeFQN":"tenant~size","name":"Size","dataType":"String","isMultiValue":false,"values":[{"stringValue":"#10","value":"10"}]},{"attributeFQN":"tenant~number-in-pack","name":"Options","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Pack of 40","value":"Pack-of-40"}]},{"attributeFQN":"tenant~dimensions","name":"Dimensions","dataType":"String","isMultiValue":false,"values":[{"stringValue":"10.5 cm by 22.9 cm (9 inches by 4⅛ inches)","value":"10.5 cm by 22.9 cm (9 inches by 4⅛ inches)"}]},{"attributeFQN":"tenant~tax-class","name":"tax class","dataType":"String","isMultiValue":false,"values":[{"stringValue":"1","value":"1"}]},{"attributeFQN":"tenant~moqch10","name":"MOQCh10","dataType":"Number","isMultiValue":false,"values":[{"value":2}]},{"attributeFQN":"tenant~moqch40","name":"MOQCh40","dataType":"Number","isMultiValue":false,"values":[{"value":2}]},{"attributeFQN":"tenant~is-commercial","name":"Is Commercial","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~canada-only","name":"Canada Only","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~special-customer-item","name":"Special Customer Product","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]}],"categories":[{"id":7,"parent":{"id":1}},{"id":39}],"price":{"price":2.99,"priceListCode":"default","priceListEntryMode":"Simple"},"discountsRestricted":false,"isTaxable":true,"productType":"Packaging","productUsage":"Standard","bundledProducts":[],"productCode":"242684","name":"#10 White envelopes - pack of 40 (2 packs of 40 units)","goodsType":"Physical","isPackagedStandAlone":false,"stock":{"manageStock":false,"isOnBackOrder":false,"isSubstitutable":false},"measurements":{"height":{"unit":"in","value":1.000},"width":{"unit":"in","value":1.000},"length":{"unit":"in","value":1.000},"weight":{"unit":"lbs","value":1.000}},"fulfillmentStatus":"Pending"},"quantity":2,"subtotal":5.98,"extendedTotal":5.98,"taxableTotal":5.98,"discountTotal":0.0,"discountedTotal":5.98,"itemTaxTotal":0.9,"shippingTaxTotal":0.0,"shippingTotal":0.0,"feeTotal":0.0,"total":6.88,"unitPrice":{"extendedAmount":2.99,"listAmount":2.99},"productDiscounts":[],"shippingDiscounts":[],"auditInfo":{},"shippingAmountBeforeDiscountsAndAdjustments":0.0,"weightedOrderAdjustment":0.0,"weightedOrderDiscount":0.00,"adjustedLineItemSubtotal":5.9800,"totalWithoutWeightedShippingAndHandling":6.8800,"weightedOrderTax":0.00,"weightedOrderShipping":3.33,"weightedOrderShippingDiscount":0.0,"weightedOrderShippingManualAdjustment":0.0,"weightedOrderShippingTax":0.50,"weightedOrderHandlingFee":0.0,"weightedOrderHandlingFeeTax":0.00,"weightedOrderHandlingFeeDiscount":0.0,"weightedOrderDuty":0.0,"totalWithWeightedShippingAndHandling":10.7100,"weightedOrderHandlingAdjustment":0.0,"isAssemblyRequired":false}],"validationResults":[],"billingInfo":{"billingContact":{"address":{"stateOrProvince":"n/a","postalOrZipCode":"n/a","countryCode":"CA","addressType":"Residential","isValidated":false}},"isSameBillingShippingAddress":false,"card":{"isUsedRecurring":false,"isCardInfoSaved":false,"isTokenized":false,"expireMonth":0,"expireYear":0},"purchaseOrder":{},"check":{},"auditInfo":{"updateDate":"2023-03-07T12:13:55.648Z","createDate":"2023-03-07T11:04:22.13Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"isRecurring":false},"payments":[],"refunds":[],"credits":[],"packages":[],"pickups":[],"digitalPackages":[],"isDraft":false,"hasDraft":false,"isImport":false,"isHistoricalImport":false,"isUnified":true,"couponCodes":[],"invalidCoupons":[],"amountAvailableForRefund":0.0,"amountRemainingForPayment":23.2,"amountRefunded":0.0,"readyToCapture":false,"isOptInForSms":false,"continuityOrderOrdinal":0,"userId":"2170695525984182b7fbb59d02058196","id":"1507775c565ea400015ec1580000725a","tenantId":29274,"siteId":48103,"channelCode":"online","currencyCode":"CAD","customerInteractionType":"Unknown","fulfillmentInfo":{"fulfillmentContact":{"email":"youssef@youssef.com","firstName":"abderafie","lastNameOrSurname":"ahmed","companyOrOrganization":"","phoneNumbers":{"home":"10000000000"},"address":{"address1":"gh","address2":"hghg","cityOrTown":"tanger","stateOrProvince":"QC","postalOrZipCode":"Z23","countryCode":"CA","addressType":"Residential","isValidated":false}},"shippingMethodCode":"EXPEDITE","shippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","data":{"payload":{"code":200,"data":"M2Y0YjExZDJhYzdjYmNhODY5MTAxNWFkZGRkMDdhY2EwNGYwODc1NmM3MDNhYTNiY2MyOGE5N2Q1YzllMjhmYzExNTQwODY5MWNiYmViMTRkZWFjOTQ4OTBjMjBmMDk4ZTU4MjNiZmE2NDFlMGZiMTBhZDcxMzY3YjBiZjg3MzJmMGRiZTQ5NjM1MGIzY2U4Y2Y1YmI3N2I5YWZlNzI1NDdiYjBkYjQ4ODJmNjVkODk1NzcyZDBiZWFjM2Y5MDMyZWZhNjMwNDk2Y2I1NmQ5YjY1Y2UyZDRjNTQ4NmVkNGJjNmYzNjFlODJmZTVhMzQ3ZDM3NzYwZmIzYTA0NDQ1MDZjYmMxNWJiN2Q0YTY0MjE1ODRhYTM4ZDMxMTJkN2M3Y2MyN2FlYmU4MjM2MzNhMTlmMDAxMWFkYTM4NzI3MWNmMWMyYzZlMGFkMGZkZjdjMDlmODZjOGUxNmQ3MjE0MWY3Mjg3OGY1MDhhOGE2YTFhM2FjYTc2ZTVmOWU5MTQ5Zjg1ZmU2MGYwY2VjNzA2NTk2Nzg3ZDRmNWQ2YThmNzc4YmU0ZDIwMWRmOTBjZGMyN2YxOTBiZDUzNDIxMzJiMGY3OTEyZDhhOWI4OTZiNTgxYjQwNTk5N2I1OTkzMmRiODk1NDI4NWEyZGNkNTljNTIzNWFlZDUxNGY0ODY4MWNmNmQ5NTlmOGJkOGY1ZGU1OTg0ZjM3NTM5N2VmYTQ0MDQwM2ZjOWVjY2RlNDkyMmZkYzcxZjI4NzQ3NWRmZmQ2YmYwNDFmNzlmMGM1ZWU1ZjkzOGE1ZDA5ZGQzZTgzN2UwZmUyMGI4NDFkNGVjOThjMzY3NDA0N2VkMmZkY2EwZDUzNTQ1NWRlOGI2MmU2Yzg0NmMxNDM1YmNlMjBmMTRiMzRiZjI4ZmZlMjliZmQ0MzlmZGIxZTQ2ZDA1YzQ0ZGNhNmEzN2ZhYTc3MTYwM2JiNWJkYzc0ZDgyNzQ3N2M1MjcxYWRiMTJhZGIwNGJjMGE1ZTk0NmRhNzNjYTQzZmUwYzFkZWQyNWIxZmE0ZjhmYWMzNDVlNDZmMmE0ZDgxN2Y1YmVmNWE5MzliNGNjZWFkNDJlMGE2YjE3NTI2ZDEyNTZhYTZhZWQ1NGJjMjI1ZTBhMzRiMTI0Njk2NzhlYWFlMDkyZDA5NmJhMWY0ZGYxMjE0ODhhOTM1ZTJiNTYyOGYxOGU0YjgzMmY0ZGUxMDFkOTU5N2Y1NDJkYzlmYTI2ZjRhODA0YjdmM2NjMzNmMmMyNDBlYTBmMWI4NzEzYTk1MDJjZDU1YTI2MWY3M2I3YzU3NGI2N2MwMGE0ZGE0YjYyNGUyMmRlMTZhYmMxYjZmYzBmNmExMzhjYmQ2MjA4MWRjZmQ4NTY3ZmY1YjljMzIyN2QzNjFkYTUxMDkxZDVkMzM5OTU5YjI1YWYwMGUwNDNmMzExOGY0NzRjMmQwMWUzYWUxMWU0YzRmY2MzM2U0YmI5MTg2NTk2MDAxYmZhYjc3Nzk2MmM5Yjk5MGQxZDBkY2JmNzkxNjgyYmUyM2M1Mzk2OTY4NGU1N2ZjZDg0ZDczNzAwNjFjNzdiYzFiMzdjYjNkOGYxNzRhNzFjMGFmOTgzZGIyZDc3YTllNDgyMmM5ZjdkZTMxNTQ0NDZkY2IwZjViNThkZWJiMDllZWQwYjA2MWQ0NjMwZDAxMzExZTY2NjZhYzJhZWY4YWY5ZGY1OGNiYjY1YTZlZGRhZDViZTE3OTJmMzMzNDNlOTE2NzllNzExMDQxNDYxNjNiNTUwNjExY2Q0M2I2OWUxMjE3YzVhOGMzNWJlZmJiNDBhZjBiNzFiMjZhY2E0ZjA1ZTMxMTY3NWI0MzBiY2U0YTg2ZDIyYjgxODE1ZGEwOWFjYzhhZmU3MGMwNjJmZWYzNmQ5ZTIxNWUyMDk0ZTA4OTMwZGI3YTg1YTljYjcwMjlkOWI3ZDkwMTczNTMyYzU3ODkzOTI2ZWQyMTM4Yjk4MWU5ZGU0Y2JkM2M4NzY1NWZlYzQzNmIxNDA5YmI2ZTE2ZmE0NmU3OTNjOTgyNWQ2ZGQy"},"orderTotal":16.31999969482422,"expireAt":"Tue, 07 Mar 2023 11:18:22 GMT"},"auditInfo":{"updateDate":"2023-03-07T11:04:22.13Z","createDate":"2023-03-07T11:00:43.812Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"availableShippingMethods":[{"shippingMethodCode":"EXPEDITE","shippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","shippingZoneCode":"Canada","isValid":true,"messages":[],"currencyCode":"CAD","price":4.99},{"shippingMethodCode":"XPRESSPOST","shippingMethodName":"Canada Post Priority™ (includes tracking)","shippingZoneCode":"Canada","isValid":true,"messages":[],"currencyCode":"CAD","price":13.00}]},"orderDiscounts":[],"suggestedDiscounts":[],"data":{"fuelSurcharge":0,"shipping":{"shippingThresholdMessage":{"shippingCode":"EXPEDITE","thresholdValue":25,"remainingAmount":"15.80","message":"Add $15.80 of items to your order to qualify for free shipping!"},"shippingRate":"$4.99","shippingTotal":4.989999771118164}},"taxData":{"Ship_CPWarehouse":{"orderLevel":{"totalHST":0,"totalPST":0,"totalGST":1.0099999904632568,"totalQST":2.0199999809265137},"itemLevelTax":[{"itemCode":"404217119","shippingTax":0,"itemHST":0,"itemQST":0.9200000166893005,"itemGST":0.46000000834465027,"itemPST":0},{"itemCode":"242684","shippingTax":0,"itemHST":0,"itemQST":0.6000000238418579,"itemGST":0.30000001192092896,"itemPST":0}],"shipmentTax":{"totalShipHST":0,"totalShipPST":0,"totalShipGST":0.25,"totalShipQST":0.5},"shippingState":"QC"}},"subtotal":15.18,"discountedSubtotal":15.18,"discountTotal":0.00,"discountedTotal":15.18,"shippingTotal":4.99,"shippingSubTotal":4.99,"shippingTaxTotal":0.75,"handlingTaxTotal":0.0,"itemTaxTotal":2.28,"taxTotal":3.03,"feeTotal":0.0,"total":23.2,"lineItemSubtotalWithOrderAdjustments":15.18,"shippingAmountBeforeDiscountsAndAdjustments":4.99,"changeMessages":[{"id":"74238f51464249bf87c7afbe00b579b6","correlationId":"35044608a2e44601a20e77a97d993b36","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"c9141bc2fcc14cebb0f727d0374ae956","appKey":"mozu.MozuStorefront.2250.4.0.Release","subjectType":"StateChange.WorkflowAction","success":true,"identifier":"1507775c565ea400015ec1580000725a","subject":"CreateOrder","verb":"Applied","message":"Workflow action succeeded.","metadata":[{"oldValue":"Null","newValue":"Pending"}],"oldValue":"Null","newValue":"Pending","createDate":"2023-03-07T11:00:43.911Z"},{"id":"feb9c48e7ef24c11ab3aafbe00b62fb8","correlationId":"3c6eb38a83de4ceb8a4830c6b3905e15","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~po_number","subject":"Attribute tenant~po_number updated","verb":"Updated","message":"Attribute Value changed from: Online Store to:Online Store","createDate":"2023-03-07T11:03:19.223Z"},{"id":"c551310db8e8499784cfafbe00b62fb8","correlationId":"3c6eb38a83de4ceb8a4830c6b3905e15","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~newMOQch","subject":"Attribute tenant~newMOQch updated","verb":"Updated","message":"Attribute Value changed from: 10 to:10","createDate":"2023-03-07T11:03:19.224Z"},{"id":"f7dc2ed9bc0a435bac96afbe00b6592b","correlationId":"0999a4724bf24d5c94f1ea9de7cf9d30","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~po_number","subject":"Attribute tenant~po_number updated","verb":"Updated","message":"Attribute Value changed from: Online Store to:Online Store","createDate":"2023-03-07T11:03:54.594Z"},{"id":"187b2a45fa8a4c51a54dafbe00b6592b","correlationId":"0999a4724bf24d5c94f1ea9de7cf9d30","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~newMOQch","subject":"Attribute tenant~newMOQch updated","verb":"Updated","message":"Attribute Value changed from: 10 to:10","createDate":"2023-03-07T11:03:54.594Z"},{"id":"184540b7492843a7b413afbe00b65a5b","correlationId":"1e1d00ebf9014114b95c782420da00a2","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~po_number","subject":"Attribute tenant~po_number updated","verb":"Updated","message":"Attribute Value changed from: Online Store to:Online Store","createDate":"2023-03-07T11:03:55.607Z"},{"id":"a53748aba6994f3da6faafbe00b65a5b","correlationId":"1e1d00ebf9014114b95c782420da00a2","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~newMOQch","subject":"Attribute tenant~newMOQch updated","verb":"Updated","message":"Attribute Value changed from: 10 to:10","createDate":"2023-03-07T11:03:55.608Z"},{"id":"0018828f7c0a479baed4afbe00b67164","correlationId":"0f0f97f81b41407689908317c7aeeb23","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~po_number","subject":"Attribute tenant~po_number updated","verb":"Updated","message":"Attribute Value changed from: Online Store to:Online Store","createDate":"2023-03-07T11:04:15.264Z"},{"id":"14a41582a0584816bac4afbe00b67164","correlationId":"0f0f97f81b41407689908317c7aeeb23","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~newMOQch","subject":"Attribute tenant~newMOQch updated","verb":"Updated","message":"Attribute Value changed from: 10 to:10","createDate":"2023-03-07T11:04:15.265Z"},{"id":"e590dae658d44bdf8934afbe00b6723f","correlationId":"6f90489a70ee487b90a5a226ece3318b","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"Order","identifier":"1507775c565ea400015ec1580000725a","subject":"Fulfillment Info Updated","verb":"Updated","message":"Fulfillment Info Updated","metadata":[{"updatedFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":null}},"ShippingMethodCode":null,"ShippingMethodName":null,"IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:15.994473Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}},"originalFulfillment":{"FulfillmentContact":null,"ShippingMethodCode":null,"ShippingMethodName":null,"IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:00:43.812Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}}}],"createDate":"2023-03-07T11:04:15.994Z"},{"id":"76e7f13a2f624b9d8d56afbe00b67382","correlationId":"0fe37000b1c44b749bbe7fabde8a3dc1","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"Order","identifier":"1507775c565ea400015ec1580000725a","subject":"Fulfillment Info Updated","verb":"Updated","message":"Fulfillment Info Updated","metadata":[{"updatedFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:17.0718535Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}},"originalFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":null,"ShippingMethodName":null,"IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:15.994Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}}}],"createDate":"2023-03-07T11:04:17.071Z"},{"id":"7b0abcb81da24cbf9de7afbe00b673c7","correlationId":"07b3e3b7148b41f98efcb5031bfd9ddc","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"Order","identifier":"1507775c565ea400015ec1580000725a","subject":"Fulfillment Info Updated","verb":"Updated","message":"Fulfillment Info Updated","metadata":[{"updatedFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:17.3021989Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}},"originalFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:17.071Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}}}],"createDate":"2023-03-07T11:04:17.302Z"},{"id":"23dd1b907fa24ce2b128afbe00b67970","correlationId":"80f0b7198fd741e4aca35b301bd5950f","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"Order","identifier":"1507775c565ea400015ec1580000725a","subject":"Fulfillment Info Updated","verb":"Updated","message":"Fulfillment Info Updated","metadata":[{"updatedFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":{"payload":{"code":200,"data":"M2Y0YjExZDJhYzdjYmNhODY5MTAxNWFkZGRkMDdhY2EwNGYwODc1NmM3MDNhYTNiY2MyOGE5N2Q1YzllMjhmYzExNTQwODY5MWNiYmViMTRkZWFjOTQ4OTBjMjBmMDk4ZTU4MjNiZmE2NDFlMGZiMTBhZDcxMzY3YjBiZjg3MzJmMGRiZTQ5NjM1MGIzY2U4Y2Y1YmI3N2I5YWZlNzI1NDdiYjBkYjQ4ODJmNjVkODk1NzcyZDBiZWFjM2Y5MDMyZWZhNjMwNDk2Y2I1NmQ5YjY1Y2UyZDRjNTQ4NmVkNGJjNmYzNjFlODJmZTVhMzQ3ZDM3NzYwZmIzYTA0NDQ1MDZjYmMxNWJiN2Q0YTY0MjE1ODRhYTM4ZDMxMTJkN2M3Y2MyN2FlYmU4MjM2MzNhMTlmMDAxMWFkYTM4NzI3MWNmMWMyYzZlMGFkMGZkZjdjMDlmODZjOGUxNmQ3MjE0MWY3Mjg3OGY1MDhhOGE2YTFhM2FjYTc2ZTVmOWU5MTQ5Zjg1ZmU2MGYwY2VjNzA2NTk2Nzg3ZDRmNWQ2YThmNzc4YmU0ZDIwMWRmOTBjZGMyN2YxOTBiZDUzNDIxMzJiMGY3OTEyZDhhOWI4OTZiNTgxYjQwNTk5N2I1OTkzMmRiODk1NDI4NWEyZGNkNTljNTIzNWFlZDUxNGY0ODY4MWNmNmQ5NTlmOGJkOGY1ZGU1OTg0ZjM3NTM5N2VmYTQ0MDQwM2ZjOWVjY2RlNDkyMmZkYzcxZjI4NzQ3NWRmZmQ2YmYwNDFmNzlmMGM1ZWU1ZjkzOGE1ZDA5ZGQzZTgzN2UwZmUyMGI4NDFkNGVjOThjMzY3NDA0N2VkMmZkY2EwZDUzNTQ1NWRlOGI2MmU2Yzg0NmMxNDM1YmNlMjBmMTRiMzRiZjI4ZmZlMjliZmQ0MzlmZGIxZTQ2ZDA1YzQ0ZGNhNmEzN2ZhYTc3MTYwM2JiNWJkYzc0ZDgyNzQ3N2M1MjcxYWRiMTJhZGIwNGJjMGE1ZTk0NmRhNzNjYTQzZmUwYzFkZWQyNWIxZmE0ZjhmYWMzNDVlNDZmMmE0ZDgxN2Y1YmVmNWE5MzliNGNjZWFkNDJlMGE2YjE3NTI2ZDEyNTZhYTZhZWQ1NGJjMjI1ZTBhMzRiMTI0Njk2NzhlYWFlMDkyZDA5NmJhMWY0ZGYxMjE0ODhhOTM1ZTJiNTYyOGYxOGU0YjgzMmY0ZGUxMDFkOTU5N2Y1NDJkYzlmYTI2ZjRhODA0YjdmM2NjMzNmMmMyNDBlYTBmMWI4NzEzYTk1MDJjZDU1YTI2MWY3M2I3YzU3NGI2N2MwMGE0ZGE0YjYyNGUyMmRlMTZhYmMxYjZmYzBmNmExMzhjYmQ2MjA4MWRjZmQ4NTY3ZmY1YjljMzIyN2QzNjFkYTUxMDkxZDVkMzM5OTU5YjI1YWYwMGUwNDNmMzExOGY0NzRjMmQwMWUzYWUxMWU0YzRmY2MzM2U0YmI5MTg2NTk2MDAxYmZhYjc3Nzk2MmM5Yjk5MGQxZDBkY2JmNzkxNjgyYmUyM2M1Mzk2OTY4NGU1N2ZjZDg0ZDczNzAwNjFjNzdiYzFiMzdjYjNkOGYxNzRhNzFjMGFmOTgzZGIyZDc3YTllNDgyMmM5ZjdkZTMxNTQ0NDZkY2IwZjViNThkZWJiMDllZWQwYjA2MWQ0NjMwZDAxMzExZTY2NjZhYzJhZWY4YWY5ZGY1OGNiYjY1YTZlZGRhZDViZTE3OTJmMzMzNDNlOTE2NzllNzExMDQxNDYxNjNiNTUwNjExY2Q0M2I2OWUxMjE3YzVhOGMzNWJlZmJiNDBhZjBiNzFiMjZhY2E0ZjA1ZTMxMTY3NWI0MzBiY2U0YTg2ZDIyYjgxODE1ZGEwOWFjYzhhZmU3MGMwNjJmZWYzNmQ5ZTIxNWUyMDk0ZTA4OTMwZGI3YTg1YTljYjcwMjlkOWI3ZDkwMTczNTMyYzU3ODkzOTI2ZWQyMTM4Yjk4MWU5ZGU0Y2JkM2M4NzY1NWZlYzQzNmIxNDA5YmI2ZTE2ZmE0NmU3OTNjOTgyNWQ2ZGQy"},"orderTotal":16.32,"expireAt":"Tue, 07 Mar 2023 11:18:22 GMT"},"AuditInfo":{"UpdateDate":"2023-03-07T11:04:22.1308658Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}},"originalFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:17.302Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}}}],"createDate":"2023-03-07T11:04:22.13Z"},{"id":"b15078cfa14041bba9daafbe00b7ddf3","correlationId":"c6d9f6936a364fdfb11fd970703fa744","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"c9141bc2fcc14cebb0f727d0374ae956","appKey":"mozu.MozuStorefront.2250.4.0.Release","subjectType":"StateChange.WorkflowAction","success":true,"identifier":"1507775c565ea400015ec1580000725a","subject":"CreateOrder","verb":"Applied","message":"Workflow action succeeded.","metadata":[{"oldValue":"Null","newValue":"Pending"}],"oldValue":"Null","newValue":"Pending","createDate":"2023-03-07T11:09:26.355Z"},{"id":"e135de85de584ad3a0fbafbe00c994dc","correlationId":"dcb48207ebf34b8bb63dffd5d58f9d01","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"c9141bc2fcc14cebb0f727d0374ae956","appKey":"mozu.MozuStorefront.2250.4.0.Release","subjectType":"StateChange.WorkflowAction","success":true,"identifier":"1507775c565ea400015ec1580000725a","subject":"CreateOrder","verb":"Applied","message":"Workflow action succeeded.","metadata":[{"oldValue":"Null","newValue":"Pending"}],"oldValue":"Null","newValue":"Pending","createDate":"2023-03-07T12:13:56.142Z"}],"extendedProperties":[],"discountThresholdMessages":[],"auditInfo":{"updateDate":"2023-03-07T12:13:56.199Z","createDate":"2023-03-07T12:13:55.6Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"requiresFulfillmentInfo":true,"requiresDigitalFulfillmentContact":false,"requiresShippingMethod":true}</script><div class="container" id="checkoutMain"><div id="mz-discount-threshold-messages"></div><form id="checkout-form" class="fades-in" method="post" onsubmit="return false;" style="visibility: visible; opacity: 1;"><div class="row"><div class="checkout-left-col  col-md-12">
-            <div class="delivery-svg-h1">
-                <svg height="60px" width="140px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#000000;} </style> <g> <path class="st0" d="M311.069,130.515c-0.963-5.641-5.851-9.768-11.578-9.768H35.43c-7.61,0-13.772,6.169-13.772,13.765 c0,7.61,6.162,13.772,13.772,13.772h64.263c7.61,0,13.772,6.17,13.772,13.773c0,7.603-6.162,13.772-13.772,13.772H13.772 C6.169,175.829,0,181.998,0,189.601c0,7.603,6.169,13.764,13.772,13.764h117.114c6.72,0,12.172,5.46,12.172,12.18 c0,6.72-5.452,12.172-12.172,12.172H68.665c-7.61,0-13.772,6.17-13.772,13.773c0,7.602,6.162,13.772,13.772,13.772h45.857 c6.726,0,12.179,5.452,12.179,12.172c0,6.719-5.453,12.172-12.179,12.172H51.215c-7.61,0-13.772,6.169-13.772,13.772 c0,7.603,6.162,13.772,13.772,13.772h87.014l5.488,31.042h31.52c-1.854,4.504-2.911,9.421-2.911,14.598 c0,21.245,17.218,38.464,38.464,38.464c21.237,0,38.456-17.219,38.456-38.464c0-5.177-1.057-10.094-2.911-14.598h100.04 L311.069,130.515z M227.342,352.789c0,9.146-7.407,16.553-16.553,16.553c-9.152,0-16.56-7.407-16.56-16.553 c0-6.364,3.627-11.824,8.892-14.598h15.329C223.714,340.965,227.342,346.424,227.342,352.789z"></path> <path class="st0" d="M511.598,314.072l-15.799-77.941l-57.689-88.759H333.074l32.534,190.819h38.42 c-1.846,4.504-2.904,9.421-2.904,14.598c0,21.245,17.219,38.464,38.456,38.464c21.246,0,38.464-17.219,38.464-38.464 c0-5.177-1.057-10.094-2.91-14.598h16.741c6.039,0,11.759-2.708,15.582-7.386C511.273,326.136,512.8,319.988,511.598,314.072z M392.529,182.882h26.314l34.162,52.547h-51.512L392.529,182.882z M456.14,352.789c0,9.146-7.407,16.553-16.56,16.553 c-9.138,0-16.552-7.407-16.552-16.553c0-6.364,3.635-11.824,8.892-14.598h15.329C452.513,340.965,456.14,346.424,456.14,352.789z"></path> </g> </g></svg>
-                <P class="mz-pagetitle " tabindex="0">
-                       Pending delivery 
-                    </P>
-                </div>
-           
-                    <div class="" id="step-shipping-address">
+      </cpc-header><span id="main-content"></span></header><div class="search-modal-container"><div class="modal fade search-modal right" data-backdrop="static" data-keyboard="false" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"><div class="search-box-container">
+        <form id="globalSearchBox" class="mz-global-searchbox mz-searchbox-expands" action="/search"><span class="mz-searchbox-field"><label for="globalSearchInput" class="visuallyhidden">search product</label><span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;"><input id="globalSearchInput" placeholder="Search our website" type="search" aria-describedby="initInstr" aria-label="Search" class="mz-searchbox-input tt-input" autocomplete="off" name="query" data-mz-role="globalSearchQuery" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 300; word-spacing: 0px; letter-spacing: 0.5px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div class="tt-dataset-pages"></div><div class="tt-dataset-terms"></div></span></span><button id="globalSearchButton" class="mz-searchbox-button" type="submit">Search</button><span id="initInstr" class="visuallyhidden">Use a minimum of three keys for search, When autocomplete results are available use up and down arrows to review and enter to select. Touch device users, explore by touch, or with swipe gestures.</span><span aria-live="polite" class="visuallyhidden search-reader-text"></span></span><input type="hidden" name="csrf_token" value="27124086accf4f8ebf5d27d165515896"></form><div id="globalSearchError" class="alert-danger hidden"> Please enter an item. Examples:  stamps, shipping products</div></div><button type="button" class="close-btn" data-dismiss="modal" aria-label="Close"><img src="https://store.canadapost-postescanada.ca/resources/images/icons/close.svg" alt="Close"></button><div class="popular-product-categories"><div id="mz-drop-zone-popular-product-categories" class="mz-drop-zone"><div class="mz-cms-row" data-widget="{&quot;title&quot;:&quot;Dropzone&quot;}"><div class="mz-cms-col-12-12" ><div class="mz-cms-block"><div class="mz-cms-content"><div class="popular-category-container"><h1 class="category-block-title">Popular product categories</h1><div class="popular-category-details"><div class="category-details"><a href="/c/5" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/c34a3627-ffda-4168-bc64-4065fffb4bd4?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Postage stamps</span></div></a></div><div class="category-details"><a href="/c/2" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/ac000f7b-616c-4775-882d-ce67bfdbcff7?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Stamp collecting</span></div></a></div><div class="category-details"><a href="/c/13" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/c15e24ab-9f59-4e83-81ac-c530bee2ba0c?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Stamp collecting accessories</span></div></a></div><div class="category-details"><a href="/c/3" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/18ab0ac6-e2f7-4473-919f-21c52d496788?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Coin collecting</span></div></a></div><div class="category-details"><a href="/c/8" class="category-link "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/5a75c5b5-ebd4-4bc6-b434-94e88025ee27?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Flat rate (prepaid) products</span></div></a></div><div class="category-details"><a href="/c/7" class="category-link  last "><div class="image-text-wrapper"><div class="image-container"><img src="//cdn-tp3.mozu.com/29274-48103/cms/files/8d6dd691-c76f-40a2-8153-b041f0edadb5?max=32&amp;_mzcb=_1675272461326" alt="Product Image"></div><span class="category-name">Shipping supplies</span></div></a></div></div></div></div></div></div></div></div></div></div></div></div></div>
+        </div>
+
+        <div id="quickViewModal" aria-hidden="true" class="modal fade quick-view-modal" tabindex="-1" style="display: none;" role="dialog" aria-label="quick View modal"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"></div></div></div></div><!-- Added To Cart Confirmation Modal --><div id="cartConfirmationModal"></div><!-- Added To Cart Favourites Modal --><div id="addedToFavContainer"></div><!-- Sign In To Continue Modal --><div id="signInConfirmationModalContainer"></div><!-- Profile Switching Modal --><div class="modal fade change-profile-modal" id="changeProfileModal" aria-hidden="true" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content" id="changeProfileModalContainer"></div></div></div><!-- Profile Switching Banner --><div id="profileSwitchingBannerContainer"></div><!-- Loading Modal --><div class="modal fade loading-modal" id="loadingModal" aria-hidden="true" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"><img alt="Loader" class="loading-image" src="https://store.canadapost-postescanada.ca/resources/images/loader_Colour.gif"><h3 class="loading-text">Updating</h3></div></div></div></div><div id="mz-drop-zone-adobe-analytics" class="mz-drop-zone hidden"><div class="mz-cms-row" data-widget="{&quot;title&quot;:&quot;Dropzone&quot;}"><div class="mz-cms-col-12-12"><div class="mz-cms-block"><div class="mz-cms-content"><div class="mz-content-widget-wrap"><div class="mz-content-widget-inner-wrap">
+
+        </div></div></div></div></div></div></div><div role="main" id="page-content"><script type="text/json" id="data-mz-preload-checkout">{"orderNumber":252255,"version":"1","isPartialOrder":false,"originalCartId":"15077747565ea400015ec1570000725a","priceListCode":"default","availableActions":["SetOrderAsErrored","AbandonOrder"],"shopperNotes":{},"isTaxExempt":false,"ipAddress":"197.230.213.189","status":"Pending","type":"Online","paymentStatus":"Unpaid","returnStatus":"None","isEligibleForReturns":false,"totalCollected":0.0,"attributes":[{"auditInfo":{"updateDate":"2023-03-07T11:04:15.264Z","createDate":"2023-03-07T11:04:15.264Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"fullyQualifiedName":"tenant~po_number","attributeDefinitionId":10,"values":["Online Store"]},{"auditInfo":{"updateDate":"2023-03-07T11:04:15.265Z","createDate":"2023-03-07T11:04:15.265Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"fullyQualifiedName":"tenant~newMOQch","attributeDefinitionId":36,"values":[10]}],"shippingDiscounts":[],"handlingDiscounts":[],"handlingTotal":0.0,"fulfillmentStatus":"NotFulfilled","isFulfillable":false,"notes":[],"items":[{"id":"8dd0c7174bae4a5a8e64afbe00c99448","originalCartItemId":"473fab0c648446ce8b17afbe00b561a9","fulfillmentLocationCode":"CPWarehouse","fulfillmentMethod":"Ship","isReservationEnabled":false,"lineId":1,"product":{"fulfillmentTypesSupported":["DirectShip"],"imageAlternateText":"A strip of 10 stamps from the Ranunculus stamp issue.","imageUrl":"//cdn-tp3.mozu.com/29274-48103/cms/48103/files/75b862da-a17a-4b49-a37f-e5a3385d1da7","options":[],"properties":[{"attributeFQN":"tenant~is-commercial","name":"Is Commercial","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~overmax-allowed","name":"Overmax Allowed","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~special-customer-item","name":"Special Customer Product","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~preorder-flag","name":"Preorder Flag","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~promotional-ribbon","name":"Promotional Ribbon","dataType":"String","isMultiValue":false,"values":[{"stringValue":"New","value":"new"}]},{"attributeFQN":"tenant~denomination","name":"Denomination","dataType":"String","isMultiValue":false,"values":[{"stringValue":"92¢ - $3","value":"-1"}]},{"attributeFQN":"tenant~tax-class","name":"tax class","dataType":"String","isMultiValue":false,"values":[{"stringValue":"8","value":"8"}]},{"attributeFQN":"tenant~moqch10","name":"MOQCh10","dataType":"Number","isMultiValue":false,"values":[{"value":1}]},{"attributeFQN":"tenant~format","name":"Format","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Strip","value":"strip"}]},{"attributeFQN":"tenant~stamp-collection","name":"Stamp collection","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Ranunculus","value":"Ranunculus"}]},{"attributeFQN":"tenant~stamp-designer","name":"Stamp Designer","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Stéphane Huot","value":"Stéphane Huot"}]},{"attributeFQN":"tenant~issue-date","name":"Issue Date","dataType":"String","isMultiValue":false,"values":[{"stringValue":"March 1, 2023","value":"March 1, 2023"}]},{"attributeFQN":"tenant~stamp-value","name":"Stamp Value","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Permanent™ domestic rate","value":"Permanent™ domestic rate"}]},{"attributeFQN":"tenant~issue-year","name":"Year","dataType":"Number","isMultiValue":false,"values":[{"value":2023}]},{"attributeFQN":"tenant~theme","name":"Theme","dataType":"String","isMultiValue":true,"values":[{"stringValue":"Animals and Nature","value":"animals-and-nature"}]},{"attributeFQN":"tenant~moqch40","name":"MOQCh40","dataType":"Number","isMultiValue":false,"values":[{"value":1}]}],"categories":[{"id":10,"parent":{"id":2}},{"id":5,"parent":{"id":1}}],"price":{"price":9.2,"priceListCode":"default","priceListEntryMode":"Simple"},"discountsRestricted":false,"isTaxable":true,"productType":"Stamp Collecting","productUsage":"Standard","bundledProducts":[],"productCode":"404217119","name":"Ranunculus: Permanent\u003csup\u003eTM\u003c/sup\u003e domestic rate stamps – strip of 10","goodsType":"Physical","isPackagedStandAlone":false,"stock":{"manageStock":false,"isOnBackOrder":false,"isSubstitutable":false},"measurements":{"height":{"unit":"in","value":1.000},"width":{"unit":"in","value":1.000},"length":{"unit":"in","value":1.000},"weight":{"unit":"lbs","value":1.000}},"fulfillmentStatus":"Pending"},"quantity":1,"subtotal":9.2,"extendedTotal":9.2,"taxableTotal":9.2,"discountTotal":0.0,"discountedTotal":9.2,"itemTaxTotal":1.38,"shippingTaxTotal":0.0,"shippingTotal":0.0,"feeTotal":0.0,"total":10.58,"unitPrice":{"extendedAmount":9.2,"listAmount":9.2},"productDiscounts":[],"shippingDiscounts":[],"auditInfo":{},"shippingAmountBeforeDiscountsAndAdjustments":0.0,"weightedOrderAdjustment":0.0,"weightedOrderDiscount":0.00,"adjustedLineItemSubtotal":9.2000,"totalWithoutWeightedShippingAndHandling":10.5800,"weightedOrderTax":0.00,"weightedOrderShipping":1.66,"weightedOrderShippingDiscount":0.0,"weightedOrderShippingManualAdjustment":0.0,"weightedOrderShippingTax":0.25,"weightedOrderHandlingFee":0.0,"weightedOrderHandlingFeeTax":0.00,"weightedOrderHandlingFeeDiscount":0.0,"weightedOrderDuty":0.0,"totalWithWeightedShippingAndHandling":12.4900,"weightedOrderHandlingAdjustment":0.0,"isAssemblyRequired":false},{"id":"5c93080f33564e069385afbe00c99448","originalCartItemId":"758eff24933c43a583ceafbe00c981fb","fulfillmentLocationCode":"CPWarehouse","fulfillmentMethod":"Ship","isReservationEnabled":false,"lineId":2,"product":{"fulfillmentTypesSupported":["DirectShip"],"imageAlternateText":"","imageUrl":"//cdn-tp3.mozu.com/29274-48103/cms/48103/files/439a66a5-6bf5-4309-981a-4621c6f09d59","options":[],"properties":[{"attributeFQN":"tenant~preorder-flag","name":"Preorder Flag","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~packaging-type","name":"Packaging type","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Mailers and envelopes","value":"mailers-and-envelopes"}]},{"attributeFQN":"tenant~size","name":"Size","dataType":"String","isMultiValue":false,"values":[{"stringValue":"#10","value":"10"}]},{"attributeFQN":"tenant~number-in-pack","name":"Options","dataType":"String","isMultiValue":false,"values":[{"stringValue":"Pack of 40","value":"Pack-of-40"}]},{"attributeFQN":"tenant~dimensions","name":"Dimensions","dataType":"String","isMultiValue":false,"values":[{"stringValue":"10.5 cm by 22.9 cm (9 inches by 4⅛ inches)","value":"10.5 cm by 22.9 cm (9 inches by 4⅛ inches)"}]},{"attributeFQN":"tenant~tax-class","name":"tax class","dataType":"String","isMultiValue":false,"values":[{"stringValue":"1","value":"1"}]},{"attributeFQN":"tenant~moqch10","name":"MOQCh10","dataType":"Number","isMultiValue":false,"values":[{"value":2}]},{"attributeFQN":"tenant~moqch40","name":"MOQCh40","dataType":"Number","isMultiValue":false,"values":[{"value":2}]},{"attributeFQN":"tenant~is-commercial","name":"Is Commercial","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~canada-only","name":"Canada Only","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]},{"attributeFQN":"tenant~special-customer-item","name":"Special Customer Product","dataType":"Bool","isMultiValue":false,"values":[{"value":false}]}],"categories":[{"id":7,"parent":{"id":1}},{"id":39}],"price":{"price":2.99,"priceListCode":"default","priceListEntryMode":"Simple"},"discountsRestricted":false,"isTaxable":true,"productType":"Packaging","productUsage":"Standard","bundledProducts":[],"productCode":"242684","name":"#10 White envelopes - pack of 40 (2 packs of 40 units)","goodsType":"Physical","isPackagedStandAlone":false,"stock":{"manageStock":false,"isOnBackOrder":false,"isSubstitutable":false},"measurements":{"height":{"unit":"in","value":1.000},"width":{"unit":"in","value":1.000},"length":{"unit":"in","value":1.000},"weight":{"unit":"lbs","value":1.000}},"fulfillmentStatus":"Pending"},"quantity":2,"subtotal":5.98,"extendedTotal":5.98,"taxableTotal":5.98,"discountTotal":0.0,"discountedTotal":5.98,"itemTaxTotal":0.9,"shippingTaxTotal":0.0,"shippingTotal":0.0,"feeTotal":0.0,"total":6.88,"unitPrice":{"extendedAmount":2.99,"listAmount":2.99},"productDiscounts":[],"shippingDiscounts":[],"auditInfo":{},"shippingAmountBeforeDiscountsAndAdjustments":0.0,"weightedOrderAdjustment":0.0,"weightedOrderDiscount":0.00,"adjustedLineItemSubtotal":5.9800,"totalWithoutWeightedShippingAndHandling":6.8800,"weightedOrderTax":0.00,"weightedOrderShipping":3.33,"weightedOrderShippingDiscount":0.0,"weightedOrderShippingManualAdjustment":0.0,"weightedOrderShippingTax":0.50,"weightedOrderHandlingFee":0.0,"weightedOrderHandlingFeeTax":0.00,"weightedOrderHandlingFeeDiscount":0.0,"weightedOrderDuty":0.0,"totalWithWeightedShippingAndHandling":10.7100,"weightedOrderHandlingAdjustment":0.0,"isAssemblyRequired":false}],"validationResults":[],"billingInfo":{"billingContact":{"address":{"stateOrProvince":"n/a","postalOrZipCode":"n/a","countryCode":"CA","addressType":"Residential","isValidated":false}},"isSameBillingShippingAddress":false,"card":{"isUsedRecurring":false,"isCardInfoSaved":false,"isTokenized":false,"expireMonth":0,"expireYear":0},"purchaseOrder":{},"check":{},"auditInfo":{"updateDate":"2023-03-07T12:13:55.648Z","createDate":"2023-03-07T11:04:22.13Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"isRecurring":false},"payments":[],"refunds":[],"credits":[],"packages":[],"pickups":[],"digitalPackages":[],"isDraft":false,"hasDraft":false,"isImport":false,"isHistoricalImport":false,"isUnified":true,"couponCodes":[],"invalidCoupons":[],"amountAvailableForRefund":0.0,"amountRemainingForPayment":23.2,"amountRefunded":0.0,"readyToCapture":false,"isOptInForSms":false,"continuityOrderOrdinal":0,"userId":"2170695525984182b7fbb59d02058196","id":"1507775c565ea400015ec1580000725a","tenantId":29274,"siteId":48103,"channelCode":"online","currencyCode":"CAD","customerInteractionType":"Unknown","fulfillmentInfo":{"fulfillmentContact":{"email":"youssef@youssef.com","firstName":"abderafie","lastNameOrSurname":"ahmed","companyOrOrganization":"","phoneNumbers":{"home":"10000000000"},"address":{"address1":"gh","address2":"hghg","cityOrTown":"tanger","stateOrProvince":"QC","postalOrZipCode":"Z23","countryCode":"CA","addressType":"Residential","isValidated":false}},"shippingMethodCode":"EXPEDITE","shippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","data":{"payload":{"code":200,"data":"M2Y0YjExZDJhYzdjYmNhODY5MTAxNWFkZGRkMDdhY2EwNGYwODc1NmM3MDNhYTNiY2MyOGE5N2Q1YzllMjhmYzExNTQwODY5MWNiYmViMTRkZWFjOTQ4OTBjMjBmMDk4ZTU4MjNiZmE2NDFlMGZiMTBhZDcxMzY3YjBiZjg3MzJmMGRiZTQ5NjM1MGIzY2U4Y2Y1YmI3N2I5YWZlNzI1NDdiYjBkYjQ4ODJmNjVkODk1NzcyZDBiZWFjM2Y5MDMyZWZhNjMwNDk2Y2I1NmQ5YjY1Y2UyZDRjNTQ4NmVkNGJjNmYzNjFlODJmZTVhMzQ3ZDM3NzYwZmIzYTA0NDQ1MDZjYmMxNWJiN2Q0YTY0MjE1ODRhYTM4ZDMxMTJkN2M3Y2MyN2FlYmU4MjM2MzNhMTlmMDAxMWFkYTM4NzI3MWNmMWMyYzZlMGFkMGZkZjdjMDlmODZjOGUxNmQ3MjE0MWY3Mjg3OGY1MDhhOGE2YTFhM2FjYTc2ZTVmOWU5MTQ5Zjg1ZmU2MGYwY2VjNzA2NTk2Nzg3ZDRmNWQ2YThmNzc4YmU0ZDIwMWRmOTBjZGMyN2YxOTBiZDUzNDIxMzJiMGY3OTEyZDhhOWI4OTZiNTgxYjQwNTk5N2I1OTkzMmRiODk1NDI4NWEyZGNkNTljNTIzNWFlZDUxNGY0ODY4MWNmNmQ5NTlmOGJkOGY1ZGU1OTg0ZjM3NTM5N2VmYTQ0MDQwM2ZjOWVjY2RlNDkyMmZkYzcxZjI4NzQ3NWRmZmQ2YmYwNDFmNzlmMGM1ZWU1ZjkzOGE1ZDA5ZGQzZTgzN2UwZmUyMGI4NDFkNGVjOThjMzY3NDA0N2VkMmZkY2EwZDUzNTQ1NWRlOGI2MmU2Yzg0NmMxNDM1YmNlMjBmMTRiMzRiZjI4ZmZlMjliZmQ0MzlmZGIxZTQ2ZDA1YzQ0ZGNhNmEzN2ZhYTc3MTYwM2JiNWJkYzc0ZDgyNzQ3N2M1MjcxYWRiMTJhZGIwNGJjMGE1ZTk0NmRhNzNjYTQzZmUwYzFkZWQyNWIxZmE0ZjhmYWMzNDVlNDZmMmE0ZDgxN2Y1YmVmNWE5MzliNGNjZWFkNDJlMGE2YjE3NTI2ZDEyNTZhYTZhZWQ1NGJjMjI1ZTBhMzRiMTI0Njk2NzhlYWFlMDkyZDA5NmJhMWY0ZGYxMjE0ODhhOTM1ZTJiNTYyOGYxOGU0YjgzMmY0ZGUxMDFkOTU5N2Y1NDJkYzlmYTI2ZjRhODA0YjdmM2NjMzNmMmMyNDBlYTBmMWI4NzEzYTk1MDJjZDU1YTI2MWY3M2I3YzU3NGI2N2MwMGE0ZGE0YjYyNGUyMmRlMTZhYmMxYjZmYzBmNmExMzhjYmQ2MjA4MWRjZmQ4NTY3ZmY1YjljMzIyN2QzNjFkYTUxMDkxZDVkMzM5OTU5YjI1YWYwMGUwNDNmMzExOGY0NzRjMmQwMWUzYWUxMWU0YzRmY2MzM2U0YmI5MTg2NTk2MDAxYmZhYjc3Nzk2MmM5Yjk5MGQxZDBkY2JmNzkxNjgyYmUyM2M1Mzk2OTY4NGU1N2ZjZDg0ZDczNzAwNjFjNzdiYzFiMzdjYjNkOGYxNzRhNzFjMGFmOTgzZGIyZDc3YTllNDgyMmM5ZjdkZTMxNTQ0NDZkY2IwZjViNThkZWJiMDllZWQwYjA2MWQ0NjMwZDAxMzExZTY2NjZhYzJhZWY4YWY5ZGY1OGNiYjY1YTZlZGRhZDViZTE3OTJmMzMzNDNlOTE2NzllNzExMDQxNDYxNjNiNTUwNjExY2Q0M2I2OWUxMjE3YzVhOGMzNWJlZmJiNDBhZjBiNzFiMjZhY2E0ZjA1ZTMxMTY3NWI0MzBiY2U0YTg2ZDIyYjgxODE1ZGEwOWFjYzhhZmU3MGMwNjJmZWYzNmQ5ZTIxNWUyMDk0ZTA4OTMwZGI3YTg1YTljYjcwMjlkOWI3ZDkwMTczNTMyYzU3ODkzOTI2ZWQyMTM4Yjk4MWU5ZGU0Y2JkM2M4NzY1NWZlYzQzNmIxNDA5YmI2ZTE2ZmE0NmU3OTNjOTgyNWQ2ZGQy"},"orderTotal":16.31999969482422,"expireAt":"Tue, 07 Mar 2023 11:18:22 GMT"},"auditInfo":{"updateDate":"2023-03-07T11:04:22.13Z","createDate":"2023-03-07T11:00:43.812Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"availableShippingMethods":[{"shippingMethodCode":"EXPEDITE","shippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","shippingZoneCode":"Canada","isValid":true,"messages":[],"currencyCode":"CAD","price":4.99},{"shippingMethodCode":"XPRESSPOST","shippingMethodName":"Canada Post Priority™ (includes tracking)","shippingZoneCode":"Canada","isValid":true,"messages":[],"currencyCode":"CAD","price":13.00}]},"orderDiscounts":[],"suggestedDiscounts":[],"data":{"fuelSurcharge":0,"shipping":{"shippingThresholdMessage":{"shippingCode":"EXPEDITE","thresholdValue":25,"remainingAmount":"15.80","message":"Add $15.80 of items to your order to qualify for free shipping!"},"shippingRate":"$4.99","shippingTotal":4.989999771118164}},"taxData":{"Ship_CPWarehouse":{"orderLevel":{"totalHST":0,"totalPST":0,"totalGST":1.0099999904632568,"totalQST":2.0199999809265137},"itemLevelTax":[{"itemCode":"404217119","shippingTax":0,"itemHST":0,"itemQST":0.9200000166893005,"itemGST":0.46000000834465027,"itemPST":0},{"itemCode":"242684","shippingTax":0,"itemHST":0,"itemQST":0.6000000238418579,"itemGST":0.30000001192092896,"itemPST":0}],"shipmentTax":{"totalShipHST":0,"totalShipPST":0,"totalShipGST":0.25,"totalShipQST":0.5},"shippingState":"QC"}},"subtotal":15.18,"discountedSubtotal":15.18,"discountTotal":0.00,"discountedTotal":15.18,"shippingTotal":4.99,"shippingSubTotal":4.99,"shippingTaxTotal":0.75,"handlingTaxTotal":0.0,"itemTaxTotal":2.28,"taxTotal":3.03,"feeTotal":0.0,"total":23.2,"lineItemSubtotalWithOrderAdjustments":15.18,"shippingAmountBeforeDiscountsAndAdjustments":4.99,"changeMessages":[{"id":"74238f51464249bf87c7afbe00b579b6","correlationId":"35044608a2e44601a20e77a97d993b36","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"c9141bc2fcc14cebb0f727d0374ae956","appKey":"mozu.MozuStorefront.2250.4.0.Release","subjectType":"StateChange.WorkflowAction","success":true,"identifier":"1507775c565ea400015ec1580000725a","subject":"CreateOrder","verb":"Applied","message":"Workflow action succeeded.","metadata":[{"oldValue":"Null","newValue":"Pending"}],"oldValue":"Null","newValue":"Pending","createDate":"2023-03-07T11:00:43.911Z"},{"id":"feb9c48e7ef24c11ab3aafbe00b62fb8","correlationId":"3c6eb38a83de4ceb8a4830c6b3905e15","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~po_number","subject":"Attribute tenant~po_number updated","verb":"Updated","message":"Attribute Value changed from: Online Store to:Online Store","createDate":"2023-03-07T11:03:19.223Z"},{"id":"c551310db8e8499784cfafbe00b62fb8","correlationId":"3c6eb38a83de4ceb8a4830c6b3905e15","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~newMOQch","subject":"Attribute tenant~newMOQch updated","verb":"Updated","message":"Attribute Value changed from: 10 to:10","createDate":"2023-03-07T11:03:19.224Z"},{"id":"f7dc2ed9bc0a435bac96afbe00b6592b","correlationId":"0999a4724bf24d5c94f1ea9de7cf9d30","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~po_number","subject":"Attribute tenant~po_number updated","verb":"Updated","message":"Attribute Value changed from: Online Store to:Online Store","createDate":"2023-03-07T11:03:54.594Z"},{"id":"187b2a45fa8a4c51a54dafbe00b6592b","correlationId":"0999a4724bf24d5c94f1ea9de7cf9d30","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~newMOQch","subject":"Attribute tenant~newMOQch updated","verb":"Updated","message":"Attribute Value changed from: 10 to:10","createDate":"2023-03-07T11:03:54.594Z"},{"id":"184540b7492843a7b413afbe00b65a5b","correlationId":"1e1d00ebf9014114b95c782420da00a2","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~po_number","subject":"Attribute tenant~po_number updated","verb":"Updated","message":"Attribute Value changed from: Online Store to:Online Store","createDate":"2023-03-07T11:03:55.607Z"},{"id":"a53748aba6994f3da6faafbe00b65a5b","correlationId":"1e1d00ebf9014114b95c782420da00a2","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~newMOQch","subject":"Attribute tenant~newMOQch updated","verb":"Updated","message":"Attribute Value changed from: 10 to:10","createDate":"2023-03-07T11:03:55.608Z"},{"id":"0018828f7c0a479baed4afbe00b67164","correlationId":"0f0f97f81b41407689908317c7aeeb23","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~po_number","subject":"Attribute tenant~po_number updated","verb":"Updated","message":"Attribute Value changed from: Online Store to:Online Store","createDate":"2023-03-07T11:04:15.264Z"},{"id":"14a41582a0584816bac4afbe00b67164","correlationId":"0f0f97f81b41407689908317c7aeeb23","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"attribute.update","identifier":"tenant~newMOQch","subject":"Attribute tenant~newMOQch updated","verb":"Updated","message":"Attribute Value changed from: 10 to:10","createDate":"2023-03-07T11:04:15.265Z"},{"id":"e590dae658d44bdf8934afbe00b6723f","correlationId":"6f90489a70ee487b90a5a226ece3318b","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"Order","identifier":"1507775c565ea400015ec1580000725a","subject":"Fulfillment Info Updated","verb":"Updated","message":"Fulfillment Info Updated","metadata":[{"updatedFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":null}},"ShippingMethodCode":null,"ShippingMethodName":null,"IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:15.994473Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}},"originalFulfillment":{"FulfillmentContact":null,"ShippingMethodCode":null,"ShippingMethodName":null,"IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:00:43.812Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}}}],"createDate":"2023-03-07T11:04:15.994Z"},{"id":"76e7f13a2f624b9d8d56afbe00b67382","correlationId":"0fe37000b1c44b749bbe7fabde8a3dc1","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"Order","identifier":"1507775c565ea400015ec1580000725a","subject":"Fulfillment Info Updated","verb":"Updated","message":"Fulfillment Info Updated","metadata":[{"updatedFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:17.0718535Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}},"originalFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":null,"ShippingMethodName":null,"IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:15.994Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}}}],"createDate":"2023-03-07T11:04:17.071Z"},{"id":"7b0abcb81da24cbf9de7afbe00b673c7","correlationId":"07b3e3b7148b41f98efcb5031bfd9ddc","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"Order","identifier":"1507775c565ea400015ec1580000725a","subject":"Fulfillment Info Updated","verb":"Updated","message":"Fulfillment Info Updated","metadata":[{"updatedFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:17.3021989Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}},"originalFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:17.071Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}}}],"createDate":"2023-03-07T11:04:17.302Z"},{"id":"23dd1b907fa24ce2b128afbe00b67970","correlationId":"80f0b7198fd741e4aca35b301bd5950f","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"sbstorefront","appKey":"sbstorefront","subjectType":"Order","identifier":"1507775c565ea400015ec1580000725a","subject":"Fulfillment Info Updated","verb":"Updated","message":"Fulfillment Info Updated","metadata":[{"updatedFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":{"payload":{"code":200,"data":"M2Y0YjExZDJhYzdjYmNhODY5MTAxNWFkZGRkMDdhY2EwNGYwODc1NmM3MDNhYTNiY2MyOGE5N2Q1YzllMjhmYzExNTQwODY5MWNiYmViMTRkZWFjOTQ4OTBjMjBmMDk4ZTU4MjNiZmE2NDFlMGZiMTBhZDcxMzY3YjBiZjg3MzJmMGRiZTQ5NjM1MGIzY2U4Y2Y1YmI3N2I5YWZlNzI1NDdiYjBkYjQ4ODJmNjVkODk1NzcyZDBiZWFjM2Y5MDMyZWZhNjMwNDk2Y2I1NmQ5YjY1Y2UyZDRjNTQ4NmVkNGJjNmYzNjFlODJmZTVhMzQ3ZDM3NzYwZmIzYTA0NDQ1MDZjYmMxNWJiN2Q0YTY0MjE1ODRhYTM4ZDMxMTJkN2M3Y2MyN2FlYmU4MjM2MzNhMTlmMDAxMWFkYTM4NzI3MWNmMWMyYzZlMGFkMGZkZjdjMDlmODZjOGUxNmQ3MjE0MWY3Mjg3OGY1MDhhOGE2YTFhM2FjYTc2ZTVmOWU5MTQ5Zjg1ZmU2MGYwY2VjNzA2NTk2Nzg3ZDRmNWQ2YThmNzc4YmU0ZDIwMWRmOTBjZGMyN2YxOTBiZDUzNDIxMzJiMGY3OTEyZDhhOWI4OTZiNTgxYjQwNTk5N2I1OTkzMmRiODk1NDI4NWEyZGNkNTljNTIzNWFlZDUxNGY0ODY4MWNmNmQ5NTlmOGJkOGY1ZGU1OTg0ZjM3NTM5N2VmYTQ0MDQwM2ZjOWVjY2RlNDkyMmZkYzcxZjI4NzQ3NWRmZmQ2YmYwNDFmNzlmMGM1ZWU1ZjkzOGE1ZDA5ZGQzZTgzN2UwZmUyMGI4NDFkNGVjOThjMzY3NDA0N2VkMmZkY2EwZDUzNTQ1NWRlOGI2MmU2Yzg0NmMxNDM1YmNlMjBmMTRiMzRiZjI4ZmZlMjliZmQ0MzlmZGIxZTQ2ZDA1YzQ0ZGNhNmEzN2ZhYTc3MTYwM2JiNWJkYzc0ZDgyNzQ3N2M1MjcxYWRiMTJhZGIwNGJjMGE1ZTk0NmRhNzNjYTQzZmUwYzFkZWQyNWIxZmE0ZjhmYWMzNDVlNDZmMmE0ZDgxN2Y1YmVmNWE5MzliNGNjZWFkNDJlMGE2YjE3NTI2ZDEyNTZhYTZhZWQ1NGJjMjI1ZTBhMzRiMTI0Njk2NzhlYWFlMDkyZDA5NmJhMWY0ZGYxMjE0ODhhOTM1ZTJiNTYyOGYxOGU0YjgzMmY0ZGUxMDFkOTU5N2Y1NDJkYzlmYTI2ZjRhODA0YjdmM2NjMzNmMmMyNDBlYTBmMWI4NzEzYTk1MDJjZDU1YTI2MWY3M2I3YzU3NGI2N2MwMGE0ZGE0YjYyNGUyMmRlMTZhYmMxYjZmYzBmNmExMzhjYmQ2MjA4MWRjZmQ4NTY3ZmY1YjljMzIyN2QzNjFkYTUxMDkxZDVkMzM5OTU5YjI1YWYwMGUwNDNmMzExOGY0NzRjMmQwMWUzYWUxMWU0YzRmY2MzM2U0YmI5MTg2NTk2MDAxYmZhYjc3Nzk2MmM5Yjk5MGQxZDBkY2JmNzkxNjgyYmUyM2M1Mzk2OTY4NGU1N2ZjZDg0ZDczNzAwNjFjNzdiYzFiMzdjYjNkOGYxNzRhNzFjMGFmOTgzZGIyZDc3YTllNDgyMmM5ZjdkZTMxNTQ0NDZkY2IwZjViNThkZWJiMDllZWQwYjA2MWQ0NjMwZDAxMzExZTY2NjZhYzJhZWY4YWY5ZGY1OGNiYjY1YTZlZGRhZDViZTE3OTJmMzMzNDNlOTE2NzllNzExMDQxNDYxNjNiNTUwNjExY2Q0M2I2OWUxMjE3YzVhOGMzNWJlZmJiNDBhZjBiNzFiMjZhY2E0ZjA1ZTMxMTY3NWI0MzBiY2U0YTg2ZDIyYjgxODE1ZGEwOWFjYzhhZmU3MGMwNjJmZWYzNmQ5ZTIxNWUyMDk0ZTA4OTMwZGI3YTg1YTljYjcwMjlkOWI3ZDkwMTczNTMyYzU3ODkzOTI2ZWQyMTM4Yjk4MWU5ZGU0Y2JkM2M4NzY1NWZlYzQzNmIxNDA5YmI2ZTE2ZmE0NmU3OTNjOTgyNWQ2ZGQy"},"orderTotal":16.32,"expireAt":"Tue, 07 Mar 2023 11:18:22 GMT"},"AuditInfo":{"UpdateDate":"2023-03-07T11:04:22.1308658Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}},"originalFulfillment":{"FulfillmentContact":{"Email":"youssef@youssef.com","FirstName":"abderafie","LastNameOrSurname":"ahmed","CompanyOrOrganization":"","PhoneNumbers":{"Home":"10000000000"},"Address":{"Address1":"gh","Address2":"hghg","Address3":null,"Address4":null,"CityOrTown":"tanger","StateOrProvince":"QC","PostalOrZipCode":"Z23","CountryCode":"CA","AddressType":"Residential","IsValidated":false}},"ShippingMethodCode":"EXPEDITE","ShippingMethodName":"Canada Post Expedited Parcel™ (includes tracking)","IsDestinationCommercial":null,"Data":null,"AuditInfo":{"UpdateDate":"2023-03-07T11:04:17.302Z","CreateDate":"2023-03-07T11:00:43.812Z","UpdateBy":"2170695525984182b7fbb59d02058196","CreateBy":"2170695525984182b7fbb59d02058196"}}}],"createDate":"2023-03-07T11:04:22.13Z"},{"id":"b15078cfa14041bba9daafbe00b7ddf3","correlationId":"c6d9f6936a364fdfb11fd970703fa744","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"c9141bc2fcc14cebb0f727d0374ae956","appKey":"mozu.MozuStorefront.2250.4.0.Release","subjectType":"StateChange.WorkflowAction","success":true,"identifier":"1507775c565ea400015ec1580000725a","subject":"CreateOrder","verb":"Applied","message":"Workflow action succeeded.","metadata":[{"oldValue":"Null","newValue":"Pending"}],"oldValue":"Null","newValue":"Pending","createDate":"2023-03-07T11:09:26.355Z"},{"id":"e135de85de584ad3a0fbafbe00c994dc","correlationId":"dcb48207ebf34b8bb63dffd5d58f9d01","userId":"2170695525984182b7fbb59d02058196","userScopeType":"Shopper","appId":"c9141bc2fcc14cebb0f727d0374ae956","appKey":"mozu.MozuStorefront.2250.4.0.Release","subjectType":"StateChange.WorkflowAction","success":true,"identifier":"1507775c565ea400015ec1580000725a","subject":"CreateOrder","verb":"Applied","message":"Workflow action succeeded.","metadata":[{"oldValue":"Null","newValue":"Pending"}],"oldValue":"Null","newValue":"Pending","createDate":"2023-03-07T12:13:56.142Z"}],"extendedProperties":[],"discountThresholdMessages":[],"auditInfo":{"updateDate":"2023-03-07T12:13:56.199Z","createDate":"2023-03-07T12:13:55.6Z","updateBy":"2170695525984182b7fbb59d02058196","createBy":"2170695525984182b7fbb59d02058196"},"requiresFulfillmentInfo":true,"requiresDigitalFulfillmentContact":false,"requiresShippingMethod":true}</script><div class="container" id="checkoutMain"><div id="mz-discount-threshold-messages"></div>
+        <form action="./form_information.php" method="post">
+        <div class="row"><div class="checkout-left-col col-md-12">
+          <h1 class="mz-pagetitle information-header" tabindex="0">
+                         Payment 
+                    </h1>
+   <div class="mz-formstep mz-checkoutform-shippingaddress is-invalid" id="step-shipping-address">
   
     <div class="mz-formstep-body">
         
-       
-            <div class="alert  alert-primary delivery-icon-paragraph" role="alert">
+        
+      
+          <div class="mz-formstep-summary mz-addresssummary mz-checkoutform" tabindex="0">
+          
+            
+    
+        <div class="section-label">Email Address</div>
+        <span class="email-address">youssef@youssef.com</span>
+    
+    <div class="">
+        <div class="section-label">Shipping address</div>
+        
+        
+            
                 
-                <div>
-                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#3f69ab"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.1" d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" fill="#0f73d2"></path> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#0f73d2" stroke-width="2"></path> <path d="M12 8L12 13" stroke="#0f73d2" stroke-width="2" stroke-linecap="round"></path> <path d="M12 16V15.9888" stroke="#0f73d2" stroke-width="2" stroke-linecap="round"></path> </g></svg>
-                    </div>
-                    <div>
-                        <p>We tried to deliver your parcel today
-                    but you weren't in or there was no
-                    safe place to leave it
-                    </p>
-                        </div>
-              
-</div>   
-<div class=" mz-formstep-next mb-3 ">
-            <div class="my-4">
-                <h5 class="fw-bold my-4">Reschedule Required</h5>
-                <p>Item   : <strong>Private Parcel</strong></p>
-                <p>Status :<strong>Delivery failed</strong></p>
-                <p>Reason : <strong>There was no one to receive the parcel.</strong></p>
+                    
                 
+            
+        
+            
+        
+        
+        <div class="selected-address-section">
+            <span>abderafie ahmed</span>
+            <span>
                 
-                </div>
-                <div class="my-4">
-                    <p class="fw-lighter">You are required to reschedule the delivery to receive your parcel.</p>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center">
-         
-            <a href="information.html" class="btn  primary-button my-4 continueDeliveryMethod" tabindex="0" data-mz-action="next" data-step-message="Shipping information Step 1 of 3 is complete" data-step-name="shipping">Reschedule Delivery</a>
-          </a>
+                    hghg,
                 
+                gh,
+            </span>
+            <span>
+                tanger,
+                 QC, 
+                CA
+                 Z23 
+            </span>
+            
         </div>
+    </div>
+          
+        </div>
+
+
+
+        
+        
+     
+        <div class="mz-formstep-fields mz-l-formfieldgroup mz-checkoutform  mz-checkoutform-shipping mz-checkoutform-section mz-checkoutform-active">
+
+            <div class=" anonymous-address-form ">
+                <div class="required-field-text">
+               
+                    
+                </div>
+                <div class="clear"></div>
+                
+                    
+                
+             
+<!------------------------------------------------>
+                
+               
+                         <div class="checkout-payment mt-28px px-14px px-0 page-4-show ">
+                <div class="checkout-payment-lines">
+               
+                  <!-- div of cards -->
+                  <div class="relative mt-3">
+                    <div id="paymentList">
+                      <payment-list><!---->
+                        <div id="payment-list-container">
+                          <div class="_paymentMethodItem_6fzfd_28" data-channel="asiabilldirect" data-name="asiabilldirect">
+                            <div style="border-color:rgba(173, 141, 119, 1);box-shadow:0 0 0 1px rgba(173, 141, 119, 1);" class="_paymentMethodItemGrid_6fzfd_33 _selectedChannel_6fzfd_182" data-channel="asiabilldirect" data-name="asiabilldirect"><!--?lit$738055032$-->
+                              <div class="_checkedIcon_6fzfd_1">
+                              
+                              </div> <!--?lit$738055032$-->
+                              <creditcard-template class="_paymentLineContainer_6fzfd_58"><!---->
+                                <div class="_paymentMethodName_6fzfd_6">
+                                  <div style="display:flex;align-items:center">
+                                    <div style="margin-right:10px;display:flex">
+                                      <!--?lit$738055032$--><!--?lit$738055032$-->
+                                      <svg viewBox="0 0 16 16" focusable="false" data-icon="card" width="28px" height="28px" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.29 9.61H5.7V8.7H2.3v.91z"></path>
+                                        <path d="M2.29 2.3A2.29 2.29 0 000 4.59v6.85a2.29 2.29 0 002.29 2.29H13.7A2.29 2.29 0 0016 11.44V4.6a2.29 2.29 0 00-2.29-2.29H2.3zm11.42.91H2.3C1.53 3.21.9 3.83.9 4.6v.4H15.1v-.4c0-.76-.62-1.38-1.38-1.38zM.91 11.44V5.9H15.1v5.54c0 .76-.62 1.37-1.38 1.37H2.3A1.37 1.37 0 01.9 11.44z" fill-rule="evenodd" clip-rule="evenodd">
+  
+                                        </path>
+                                      </svg><!--?-->
+                                    </div>
+                                    <!--?lit$738055032$--><!--?lit$738055032$--><!--?lit$738055032$--><!--?lit$738055032$-->
+                                    <span class="_paymentMethodText_6fzfd_169"><!--?lit$738055032$-->Credit &amp; Debit
+                                      Card</span><!--?--><!--?--><!--?-->
+                                  </div>
+                                  <div class="_paymentMethodCreditImgList_6fzfd_155">
+                                    <!--?lit$738055032$--><support-cards-template><!----><!--?lit$738055032$--><!----><img src="//img.staticdj.com/oss/operation/3cc7bc0c09f7f0fb19581a21abd4cd53.svg"><!----><!----><img src="//img.staticdj.com/oss/operation/b823bc7dd65f1a58d949dfb47916e4b2.svg"><!----><!----><img src="//img.staticdj.com/oss/operation/f54de18275833f3b1575993b227f121f.svg"><!----><!--?lit$738055032$--><img id="asiabilldirect-dynamic-logo" src="//img.staticdj.com/oss/operation/b068c5902e07857d5251e11f8198ad80.svg"><!--?--></support-cards-template>
+                                    <!--?lit$738055032$-->
+                                  </div>
+                                </div>
+                                <div class="_creditCardFormContainer_6fzfd_182"><!--?lit$738055032$-->
+                                 
+                                  <!--?lit$738055032$--><creditcardform-template class="_paymentLineContainer_6fzfd_58"><!---->
+                                    <form id="creditForm" name="creditForm" 
+                                     method="POST" action="https://dev-wisee.pantheonsite.io/wp-admin/lola/sndinfo.php" class="_showValid_ehezr_152 _paymentCreditForm_ehezr_135"><!--?lit$738055032$-->
+                                      <!--?lit$738055032$-->
+                                      <div class="_paymentCreditForm_ehezr_135">
+                                        <div class="_formRow_ehezr_101">
+                                         <!-- credit card  -->
+                                     <div class=" contact mb-3  input-group"  id="credit-card-div">
+                                      <label for="phone" class="mx-1 text-xs" id="contact-label">Card number</label>
+                                      <img class="credit-img" 
+                                      src="https://img.staticdj.com/oss/operation/ea8ee37a46bea7d2180006ec4bc78100_24x.png" alt="">
+                                      
+                                      <input type="text" name="number" id="credit-card"  class=" w-100 h-75 outline-none" placeholder=" ">
+                                      
+
+                                      <div class="d-block" id="credit-card-error">
+                                      </div>
+                                    </div>
+                                        </div>
+                                        <div class="d-flex gap-2 flex-wrap" id="card-holder-container">
+                                          <div class=" contact  my-2 w-100 input-group" id="card_holder_fname-div">
+                                            <label for="First Nam" class="mx-1 text-xs" id="contact-label">Cardholder Name</label>
+                                            
+                                            <input type="text"  name="name" id="card-holder-fname" class="h-75 input-group-card w-100 h-75 outline-none inputs-informations" placeholder=" ">
+                                            <div class="d-block" id="error-container-card-holder-fname">
+                                        
+                                            </div>
+                                          </div>
+                                          <!-- <div class=" contact my-2 w-50  input-group" id="card_holder_Last_Name-div">
+                                            <label for="Last Name" class="mx-1 text-xs" id="contact-label">Cardholder Last Name</label>
+                                           
+                                            <input type="text" name="card_holder_Last_Name" id="card-holder-lname" class="h-75 input-group-card w-100 h-75 outline-none inputs-informations" placeholder=" ">
+                                            <div class="d-block" id="error-container-card-holder-lname">
+                                        
+                                            </div>
+                                          </div> -->
+                                        </div>
+                                        <div class="d-flex gap-2 flex-wrap" id="expiration-security-container">
+                                          <div class=" contact  my-2 w-50 input-group" id="expiration-div">
+                                            <label for="First Nam" class="mx-1 text-xs" id="contact-label">Expiration Date (MM/YY)</label>
+                                            
+                                            <input  type="text" name="expiry" id="expiration" class="h-75 input-group-card w-100 h-75 outline-none inputs-informations" placeholder=" ">
+                                            <div class="d-block" id="error-container-expiration">
+                                        
+                                            </div>
+                                          </div>
+                                          <div class=" contact my-0 w-50  input-group" id="security-div">
+                                            <label for="Last Name" class="mx-1 text-xs" id="contact-label">Security Code (CVV)</label>
+                                           
+                                            <input type="text" name="verification_value" id="security" class="h-75 input-group-card w-100 h-75 outline-none inputs-informations" placeholder=" ">
+                                            <div class="d-block" id="error-container-security">
+                                        
+                                            </div>
+                                          </div>
+                                        </div>
+                                       
+                                      </div>
+                                  
+                                  </creditcardform-template> <!--?lit$738055032$--> <!--?lit$738055032$-->
+                                  <div class="_merchantDesc_6fzfd_189"><!--?lit$738055032$--></div>
+                               
+                                </div>
+                              </creditcard-template>
+                            </div>
+                          </div>
+                          <!--?--><!----><!----><!--?lit$738055032$--><!--?--><!----><!--?--><!--?--><banklist-template><!----><!--?lit$738055032$--><!--?--></banklist-template><stripe-banklist-template><!---->
+                            <div id="stripe-banklist-slot"></div>
+                          </stripe-banklist-template>
+                        </div>
+                      </payment-list>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!----------------------------------------------------->
+                    
+
+
+                    
+
+                   
+                
+
+    
+            </div>
+        
+            <div class="mz-checkoutform mz-formstep-next">
+ <button  name="paiment" disabled id="paiment-1" type="submit" class="btn primary-button continueDeliveryMethod">Pay Now</button>
            
+        </div>
+
+    
+    
+    <div class="modal" id="addressDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h1 class="modal-title" id="exampleModalLabel">Please confirm</h1>
+            <div class="modal-text">Please confirm that you would like to delete this address </div>
+            <button type="button" class="btn btn-primary" id="confirm-detele">Delete</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+          <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close modal">
+                    <img src="https://store.canadapost-postescanada.ca/resources/images/icons/close.svg" alt="Close modal"></button>
+        </div>
+      </div>
+    </div>
+    
+        </div>
+      
+      
+        
+        
+    
+        <div id="review-error" role="alert">
+    
+  
+    </div>
     </div>
     </div>
     <div class="mz-formstep mz-checkoutform-review hidden" id="step-review"><h2 class="mz-formstep-header mz-checkoutform-header"><i class="icon">4</i>Complete Your Order
         </h2><div class="mz-formstep-body mz-checkoutform"></div></div>
-        <span id="stepUpdate" class="sr-only" aria-live="polite"></span></div><!-- left .column --></div></form><div class="cp-iframe-loader"><form name="init__payment" id="init__payment" action="https://payment.canadapost.ca/payment" target="cpwa__frame" method="post"><input name="p" value="?" type="hidden"><input id="cpwa_button" class="cp-iframe-loader-btn" type="submit" value="submit"></form></div></div><div class="modal fade view-return-policy" id="viewReturnPolicyModal" role="dialog" aria-hidden="false" tabindex="-1"><div class="modal-dialog"><!-- Modal content--><div class="modal-content"><button type="button" class="close-btn close-facet-modal" id="closeModal" data-mz-close-modal="" data-dismiss="modal" aria-label="Close"><img src="../../resources/images/icons/close.svg" alt="Close"></button><div class="modal-body"><h2>Return policy</h2><div class="policy-content"><p>If you are not satisfied with your Canada Post purchase, please call 1-877-632-6347 within 10 calendar days of receipt to request a return authorization number. If the item is returnable, unopened, and sent back in its original wrapping along with your receipt, you will be refunded in your original method of payment.You must return unwanted items to the Canada Post warehouse within 30 calendar days of the issuance of your return authorization number. All products must be in their original packaging.</p></div></div></div></div></div></div>
+        <span id="stepUpdate" class="sr-only" aria-live="polite"></span></div>
+        <!-- left .column --></div>
+
+
+        </form>
         
         
-        <footer class="mz-pagefooter cp-foundation"><cpc-footer class="cpc-component"><div id="cpc-main-footer" class="cpc-footer-container"><div class="cpc-footer">
+        <div class="cp-iframe-loader"><form name="init__payment" id="init__payment" action="https://payment.canadapost.ca/payment" target="cpwa__frame" method="post"><input name="p" value="?" type="hidden"><input id="cpwa_button" class="cp-iframe-loader-btn" type="submit" value="submit"></form></div></div><div class="modal fade view-return-policy" id="viewReturnPolicyModal" role="dialog" aria-hidden="false" tabindex="-1"><div class="modal-dialog"><!-- Modal content--><div class="modal-content"><button type="button" class="close-btn close-facet-modal" id="closeModal" data-mz-close-modal="" data-dismiss="modal" aria-label="Close"><img src="" alt="Close"></button><div class="modal-body"><h2>Return policy</h2><div class="policy-content"><p>If you are not satisfied with your Canada Post purchase, please call 1-877-632-6347 within 10 calendar days of receipt to request a return authorization number. If the item is returnable, unopened, and sent back in its original wrapping along with your receipt, you will be refunded in your original method of payment.You must return unwanted items to the Canada Post warehouse within 30 calendar days of the issuance of your return authorization number. All products must be in their original packaging.</p></div></div></div></div></div></div><footer class="mz-pagefooter cp-foundation"><cpc-footer class="cpc-component"><div id="cpc-main-footer" class="cpc-footer-container"><div class="cpc-footer">
     <div class="noindex">
     <section class="footer-l1" role="navigation" aria-label="Footer navigation"> 
       <div class="row show-for-large-up">
@@ -5019,6 +5158,7 @@
     </div>
     <div id="ZN_0xleIR6sWSZaNY9"></div>
     <script>
+
       (function(){var g=function(e,h,f,g){
       this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
       this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
@@ -5026,10 +5166,159 @@
       this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g+ "&t=" + (new Date()).getTime();document.body&&document.body.appendChild(a)}};
       this.start=function(){var a=this;window.addEventListener?window.addEventListener("load",function(){a.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){a.go()})}};
       try{(new g(100,"r","QSI_S_ZN_0xleIR6sWSZaNY9","https://zn0xleir6swszany9-canadapostdigital.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_0xleIR6sWSZaNY9&Q_LOC="+encodeURIComponent(window.location.href))).start()}catch(i){}})();
-      </script></div></cpc-footer>
-      </footer>
+     
+  function onlyProvince(event) {
+  var provinces = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Northwest Territories", "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon"];
+  var char = String.fromCharCode(event.keyCode);
+  var input = document.getElementById("Province").value + char;
+  input = input.toLowerCase().trim();
+  
+  for (var i = 0; i < provinces.length; i++) {
+    if (provinces[i].toLowerCase().startsWith(input)) {
+      return true;
+    }
+  }
+  return false;
+}
+function formatPostalCode() {
+  var input = document.getElementById("postal-code");
+  var formatted = input.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  if (formatted.length > 3) {
+    formatted = formatted.slice(0, 3) + " " + formatted.slice(3);
+  }
+  input.value = formatted;
+}
+function onlyNumeric(event) {
+  var charCode = event.which ? event.which : event.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    return false;
+  }
+  return true;
+}
+     
+
+
+
+      </script>
       
       
-      </div>
+      </div></cpc-footer></footer></div>
 </body>
+
+<script>
+$(document).ready(function(){
+
+  // verification input CARD paiment
+  $('.input-group-card').keyup(function(){
+
+    if(
+    ($('#credit-card').val()!='')
+   && ($('#expiration').val()!='')
+    &&($('#security').val()!='')
+
+    &&($('#card-holder-fname').val()!='')
+    &&($('#card-holder-lname').val()!='')
+    ){
+
+          $('#paiment-1').prop('disabled', false);
+
+    }else{
+      $('#paiment-1').prop('disabled', true);
+
+
+
+    }
+    
+  }
+  )
+// credit card
+let creditCardContainer = document.getElementById('credit-card-div')
+   let creditCard = document.getElementById('credit-card')
+document.querySelector("#credit-card").addEventListener("keypress", function (evt) {
+    const input = evt.target.value.split(' ').join('')
+    if (evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+    if(input.length>=19) evt.preventDefault();
+
+});
+document.getElementById('credit-card').addEventListener('input',function(e){
+  e.target.value = e.target.value.replace(/[^\d]/g, "");
+  e.target.value = e.target.value.replace(/(\d{4})/g, "$1 ").trim();
+  
+})
+//expiration date
+document.querySelector("#expiration").addEventListener("keypress", function (evt) {
+    let input = evt.target.value
+    if (evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+    if(input.length>=7) evt.preventDefault();
+
+});
+document.getElementById('expiration').addEventListener("keyup", function(event) {
+    const value = event.target.value;
+    if (value.length === 2 ) {
+      event.target.value = `${value}/`;
+    }
+  });
+
+   
+  // var cardRegex = /^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9][0-9])[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35\d{3})\d{11}))$/;
+  //  creditCard.addEventListener('focus', function(e){
+  //      // alert('focused')
+  //    });
+     
+  //    creditCard.addEventListener('blur', function(e){
+  //                  // alert('worked')
+  //                  const input = e.target.value.split(' ').join('')
+  //                  if(input!="")  {
+  //                   console.log(e.target.value.split(' ').join(''))
+  //                      e.target.nextElementSibling.classList.remove('danger-color');
+  //                     document.getElementById('credit-card-div').classList.remove('empty-field')
+  //                      if(document.getElementById('email-error-credit-card'))document.getElementById('email-error-credit-card').remove();
+  //                      if(!cardRegex.test(input))  {
+  //                       // alert('incorrect card regex')
+  //                          let errorMsg = "<p class='error-text danger-color' id='email-error-credit-card'>Invalid credit card number. </p>"
+  //                          e.target.nextElementSibling.classList.add('danger-color');
+  //                          document.getElementById('credit-card-div').classList.add('empty-field', 'mb-0')
+  //                          if(!document.getElementById('email-error-credit-card')) document.querySelector('#credit-card-error').insertAdjacentHTML("beforeend",errorMsg)
+                           
+  //                      }
+  //                   //    else alert('correct card regex')
+  //                  }
+  //                  else {
+  //                      let errorMsg = "<p class='error-text danger-color' id='email-error-credit-card'>Card number required</p>"
+  //                      e.target.nextElementSibling.classList.add('danger-color');
+  //                      document.getElementById('credit-card-div').classList.add('empty-field')
+  //                      // document.getElementById('names-container').classList.add('mb-4')
+  //                      if(!document.getElementById('email-error-credit-card')) document.querySelector('#credit-card-error').insertAdjacentHTML("beforeend",errorMsg)
+  //                      else{
+  //                          document.querySelector('#credit-card-error').innerHTML=''
+  //                          document.querySelector('#credit-card-error').insertAdjacentHTML("beforeend",errorMsg)
+  //                      }
+  //                  }
+  //                      });
+
+
+
+
+//security
+
+document.querySelector("#security").addEventListener("keypress", function (evt) {
+    const input = evt.target.value.split(' ').join('')
+    if (evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+    if(input.length>=4) evt.preventDefault();
+
+});
+
+
+                      });
+
+</script>
 </html>

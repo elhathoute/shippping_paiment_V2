@@ -11450,11 +11450,11 @@ textarea.form-horizontal .form-group-sm .form-control,select[multiple].form-hori
 }
 
 .btn.primary-button:disabled {
-    color: #666;
-    background-color:white;
-    color:#000000;
+    background-color: #0467c6;
+    color: #000000;
     border: solid 1px blue;
     cursor: not-allowed;
+    color: white;
 }
 
 .btn.primary-button:focus {
@@ -31158,8 +31158,8 @@ body {
     padding: 10px;
 }
 #step-shipping-address{
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 
 /* .mz-formstep.is-invalid,.mz-formstep.is-incomplete,.mz-formstep.is-undefined {
@@ -32174,7 +32174,7 @@ body {
 
 @media (min-width: 768px) {
     .mz-checkoutform {
-        padding:0 80px 0 40px;
+        /* padding:0 80px 0 40px; */
         box-sizing: border-box
     }
 }
