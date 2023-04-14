@@ -1,3 +1,17 @@
+/*new added*/
+#step-shipping-address{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 6% 0% 20% 0%;;
+}
+.mz-checkout .mz-l-pagewrapper {
+    position: relative;
+    
+    
+}
+
 .clear {
     clear: both
 }
@@ -17165,7 +17179,8 @@ button:focus {
 
 .mz-pagetitle {
     /* margin-top: 60px; */
-    clear: both
+    clear: both;
+    font-family: serif !important;
 }
 
 .mz-pagetitle .mz-pagetitle-note {
@@ -31116,7 +31131,7 @@ body {
 
 
 .delivery-svg-h1{
-    padding: 10px 0px 0px 80px;
+    padding: 43px 0px 0px 80px;
     /* margin-left: 50px; */
     margin-right: 25%;
     margin-bottom: 50px;
@@ -31157,10 +31172,7 @@ body {
     text-align: center;
     padding: 10px;
 }
-#step-shipping-address{
-    /* margin-left: 50px;
-    margin-right: 50px; */
-}
+
 
 /* .mz-formstep.is-invalid,.mz-formstep.is-incomplete,.mz-formstep.is-undefined {
     border-top: 4px solid #098a00
@@ -32159,11 +32171,11 @@ body {
     display: none
 }
 
-.mz-checkout .mz-l-pagewrapper {
+/* .mz-checkout .mz-l-pagewrapper {
     position: relative;
     min-height: 100vh !important;
     
-}
+} */
 
 @media only screen and (min-width: 768px) {
     #walletWidgetDiv {
